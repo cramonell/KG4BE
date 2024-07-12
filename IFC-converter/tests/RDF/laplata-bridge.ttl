@@ -1,0 +1,1158 @@
+@prefix beo: <https://w3id.org/beo#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix fog: <https://w3id.org/fog#> .
+@prefix gom: <https://w3id.org/gom#> .
+@prefix inst: <http://0.0.0.0:5004/containers/cont_001/data/graph/> .
+@prefix omg: <https://w3id.org/omg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+inst: a owl:Ontology .
+
+inst:Site_1024 a bot:Site,
+        bot:Zone ;
+    bot:ContainsZone inst:Building_141 ;
+    bot:ID "2e$bkiz591o9YpQbXczPc7"^^xsd:string ;
+    bot:Name "Superficie:272932"^^xsd:string ;
+    omg:hasGeometry inst:geom_1024 .
+
+inst:Beam_17435 a beo:Beam,
+        bot:Element ;
+    bot:ID "2GJypToFv3vBbA$MMwNx$w"^^xsd:string ;
+    bot:Name "SectionD:SectionD:282028"^^xsd:string ;
+    bot:Tag "282028"^^xsd:string ;
+    omg:hasGeometry inst:geom_17435 .
+
+inst:Beam_17688 a beo:Beam,
+        bot:Element ;
+    bot:ID "2GJypToFv3vBbA$MMwNxmy"^^xsd:string ;
+    bot:Name "SectionC:SectionC:282218"^^xsd:string ;
+    bot:Tag "282218"^^xsd:string ;
+    omg:hasGeometry inst:geom_17688 .
+
+inst:Beam_17946 a beo:Beam,
+        bot:Element ;
+    bot:ID "2GJypToFv3vBbA$MMwNxo6"^^xsd:string ;
+    bot:Name "SectionD:SectionD:282320"^^xsd:string ;
+    bot:Tag "282320"^^xsd:string ;
+    omg:hasGeometry inst:geom_17946 .
+
+inst:Beam_18197 a beo:Beam,
+        bot:Element ;
+    bot:ID "2GJypToFv3vBbA$MMwNxqe"^^xsd:string ;
+    bot:Name "SectionC:SectionC:282494"^^xsd:string ;
+    bot:Tag "282494"^^xsd:string ;
+    omg:hasGeometry inst:geom_18197 .
+
+inst:Beam_18459 a beo:Beam,
+        bot:Element ;
+    bot:ID "2GJypToFv3vBbA$MMwNxtf"^^xsd:string ;
+    bot:Name "SectionE:SectionE:282559"^^xsd:string ;
+    bot:Tag "282559"^^xsd:string ;
+    omg:hasGeometry inst:geom_18459 .
+
+inst:Beam_18712 a beo:Beam,
+        bot:Element ;
+    bot:ID "2GJypToFv3vBbA$MMwNwBN"^^xsd:string ;
+    bot:Name "SectionC:SectionC:282753"^^xsd:string ;
+    bot:Tag "282753"^^xsd:string ;
+    omg:hasGeometry inst:geom_18712 .
+
+inst:Beam_18946 a beo:Beam,
+        bot:Element ;
+    bot:ID "2GJypToFv3vBbA$MMwNwAJ"^^xsd:string ;
+    bot:Name "SectionB:SectionB:282821"^^xsd:string ;
+    bot:Tag "282821"^^xsd:string ;
+    omg:hasGeometry inst:geom_18946 .
+
+inst:Beam_7052 a beo:Beam,
+        bot:Element ;
+    bot:ID "1bO7MqHpr2YPZvqheewbAU"^^xsd:string ;
+    bot:Name "SectionB:SectionB:245731"^^xsd:string ;
+    bot:Tag "245731"^^xsd:string ;
+    omg:hasGeometry inst:geom_7052 .
+
+inst:Beam_7307 a beo:Beam,
+        bot:Element ;
+    bot:ID "1bO7MqHpr2YPZvqheewYrj"^^xsd:string ;
+    bot:Name "SectionC:SectionC:245776"^^xsd:string ;
+    bot:Tag "245776"^^xsd:string ;
+    omg:hasGeometry inst:geom_7307 .
+
+inst:Beam_7415 a beo:Beam,
+        bot:Element ;
+    bot:ID "1bO7MqHpr2YPZvqheewYqg"^^xsd:string ;
+    bot:Name "SectionB:SectionB:245847"^^xsd:string ;
+    bot:Tag "245847"^^xsd:string ;
+    omg:hasGeometry inst:geom_7415 .
+
+inst:Beam_7522 a beo:Beam,
+        bot:Element ;
+    bot:ID "1bO7MqHpr2YPZvqheewYpI"^^xsd:string ;
+    bot:Name "SectionB:SectionB:246191"^^xsd:string ;
+    bot:Tag "246191"^^xsd:string ;
+    omg:hasGeometry inst:geom_7522 .
+
+inst:Beam_7628 a beo:Beam,
+        bot:Element ;
+    bot:ID "1bO7MqHpr2YPZvqheewYvn"^^xsd:string ;
+    bot:Name "SectionB:SectionB:246540"^^xsd:string ;
+    bot:Tag "246540"^^xsd:string ;
+    omg:hasGeometry inst:geom_7628 .
+
+inst:BuildingStorey_22825 a bot:Storey,
+        bot:Zone ;
+    bot:ContainsElement inst:Beam_17435,
+        inst:Beam_17688,
+        inst:Beam_17946,
+        inst:Beam_18197,
+        inst:Beam_18459,
+        inst:Beam_18712,
+        inst:Beam_18946,
+        inst:Beam_7052,
+        inst:Beam_7307,
+        inst:Beam_7415,
+        inst:Beam_7522,
+        inst:Beam_7628,
+        inst:Sensor_23277,
+        inst:Sensor_23293,
+        inst:Sensor_23325,
+        inst:Sensor_23341,
+        inst:Sensor_23357,
+        inst:Sensor_23373,
+        inst:Sensor_23389,
+        inst:Sensor_23405,
+        inst:Sensor_23421,
+        inst:Sensor_23437,
+        inst:Sensor_23453,
+        inst:Sensor_23469,
+        inst:Sensor_23485,
+        inst:Sensor_23501,
+        inst:Sensor_23517,
+        inst:Sensor_23533,
+        inst:Sensor_23549,
+        inst:Sensor_23565 ;
+    bot:ID "3CQqOBwfPCiuTz8ohQbc50"^^xsd:string ;
+    bot:Name "ContinuousBeam"^^xsd:string ;
+    omg:hasGeometry inst:geom_22825 .
+
+inst:BuildingStorey_22831 a bot:Storey,
+        bot:Zone ;
+    bot:ContainsElement inst:Column_1592,
+        inst:Column_1637,
+        inst:Column_6917,
+        inst:Column_6959,
+        inst:Sensor_23692,
+        inst:Slab_1231 ;
+    bot:ID "3pOmWRBHH3KePjwixneCex"^^xsd:string ;
+    bot:Name "Pier.3"^^xsd:string ;
+    omg:hasGeometry inst:geom_22831 .
+
+inst:BuildingStorey_22837 a bot:Storey,
+        bot:Zone ;
+    bot:ContainsElement inst:Column_1461,
+        inst:Column_1506,
+        inst:Column_5145,
+        inst:Column_5187,
+        inst:Sensor_23708,
+        inst:Slab_1170 ;
+    bot:ID "2nvCQU4CjAOvHVibRvhbEh"^^xsd:string ;
+    bot:Name "Pier.2"^^xsd:string ;
+    omg:hasGeometry inst:geom_22837 .
+
+inst:BuildingStorey_22843 a bot:Storey,
+        bot:Zone ;
+    bot:ContainsElement inst:Column_1326,
+        inst:Column_1375,
+        inst:Column_3371,
+        inst:Column_3415,
+        inst:Sensor_23309,
+        inst:Slab_1079 ;
+    bot:ID "1SrKSYssT0e9ifhZ3C6opi"^^xsd:string ;
+    bot:Name "Pier.1"^^xsd:string ;
+    omg:hasGeometry inst:geom_22843 .
+
+inst:BuildingStorey_22849 a bot:Storey,
+        bot:Zone ;
+    bot:ContainsElement inst:Column_10211,
+        inst:Column_10253,
+        inst:Sensor_23581,
+        inst:Slab_10424,
+        inst:Slab_10461,
+        inst:Slab_10497,
+        inst:Slab_10533,
+        inst:Slab_7756,
+        inst:Wall_10358,
+        inst:Wall_10744,
+        inst:Wall_10820,
+        inst:Wall_7892,
+        inst:Wall_8051,
+        inst:Wall_8168,
+        inst:Wall_8263,
+        inst:Wall_8370,
+        inst:Wall_8486 ;
+    bot:ID "3RebYL0RP1EuGeNYJdgoOt"^^xsd:string ;
+    bot:Name "Abutment.2"^^xsd:string ;
+    omg:hasGeometry inst:geom_22849 .
+
+inst:BuildingStorey_22855 a bot:Storey,
+        bot:Zone ;
+    bot:ContainsElement inst:Column_12634,
+        inst:Column_12676,
+        inst:Sensor_23261,
+        inst:Slab_13548,
+        inst:Slab_13628,
+        inst:Slab_13663,
+        inst:Slab_7693,
+        inst:Wall_10887,
+        inst:Wall_12790,
+        inst:Wall_12921,
+        inst:Wall_13029,
+        inst:Wall_13150,
+        inst:Wall_13251,
+        inst:Wall_13356,
+        inst:Wall_13410,
+        inst:Wall_13477 ;
+    bot:ID "3DuF8Mw6b3XQDF_SKX0Txz"^^xsd:string ;
+    bot:Name "Abutment.1"^^xsd:string ;
+    omg:hasGeometry inst:geom_22855 .
+
+inst:Building_141 a bot:Building,
+        bot:Zone ;
+    bot:ID "2e$bkiz591o9YpQbXczPc4"^^xsd:string ;
+    bot:hasStorey inst:BuildingStorey_22825,
+        inst:BuildingStorey_22831,
+        inst:BuildingStorey_22837,
+        inst:BuildingStorey_22843,
+        inst:BuildingStorey_22849,
+        inst:BuildingStorey_22855 ;
+    omg:hasGeometry inst:geom_141 .
+
+inst:Column_10211 a beo:Column,
+        bot:Element ;
+    bot:ID "049z9zq$f6uwNaZ1v2Mwes"^^xsd:string ;
+    bot:Name "POT:POT:257325"^^xsd:string ;
+    bot:Tag "257325"^^xsd:string ;
+    omg:hasGeometry inst:geom_10211 .
+
+inst:Column_10253 a beo:Column,
+        bot:Element ;
+    bot:ID "049z9zq$f6uwNaZ1v2MwdS"^^xsd:string ;
+    bot:Name "POT:POT:257735"^^xsd:string ;
+    bot:Tag "257735"^^xsd:string ;
+    omg:hasGeometry inst:geom_10253 .
+
+inst:Column_12634 a beo:Column,
+        bot:Element ;
+    bot:ID "3051FLa5n01RzlwCgMUIpm"^^xsd:string ;
+    bot:Name "POT:POT:263986"^^xsd:string ;
+    bot:Tag "263986"^^xsd:string ;
+    omg:hasGeometry inst:geom_12634 .
+
+inst:Column_12676 a beo:Column,
+        bot:Element ;
+    bot:ID "3051FLa5n01RzlwCgMUICB"^^xsd:string ;
+    bot:Name "POT:POT:264393"^^xsd:string ;
+    bot:Tag "264393"^^xsd:string ;
+    omg:hasGeometry inst:geom_12676 .
+
+inst:Column_1326 a beo:Column,
+        bot:Element ;
+    bot:ID "3goGOBY5TCiA0Xi9NY$r9L"^^xsd:string ;
+    bot:Name "Hormigón-Redondo-Pilar:1.5m:216431"^^xsd:string ;
+    bot:Tag "216431"^^xsd:string ;
+    omg:hasGeometry inst:geom_1326 .
+
+inst:Column_1375 a beo:Column,
+        bot:Element ;
+    bot:ID "3goGOBY5TCiA0Xi9NY$r69"^^xsd:string ;
+    bot:Name "Hormigón-Redondo-Pilar:1.5m:216755"^^xsd:string ;
+    bot:Tag "216755"^^xsd:string ;
+    omg:hasGeometry inst:geom_1375 .
+
+inst:Column_1461 a beo:Column,
+        bot:Element ;
+    bot:ID "3goGOBY5TCiA0Xi9NY$r7_"^^xsd:string ;
+    bot:Name "Hormigón-Redondo-Pilar:1.5m:216772"^^xsd:string ;
+    bot:Tag "216772"^^xsd:string ;
+    omg:hasGeometry inst:geom_1461 .
+
+inst:Column_1506 a beo:Column,
+        bot:Element ;
+    bot:ID "3goGOBY5TCiA0Xi9NY$r1o"^^xsd:string ;
+    bot:Name "Hormigón-Redondo-Pilar:1.5m:216904"^^xsd:string ;
+    bot:Tag "216904"^^xsd:string ;
+    omg:hasGeometry inst:geom_1506 .
+
+inst:Column_1592 a beo:Column,
+        bot:Element ;
+    bot:ID "3goGOBY5TCiA0Xi9NY$qyg"^^xsd:string ;
+    bot:Name "Hormigón-Redondo-Pilar:1.5m:217104"^^xsd:string ;
+    bot:Tag "217104"^^xsd:string ;
+    omg:hasGeometry inst:geom_1592 .
+
+inst:Column_1637 a beo:Column,
+        bot:Element ;
+    bot:ID "3goGOBY5TCiA0Xi9NY$q_l"^^xsd:string ;
+    bot:Name "Hormigón-Redondo-Pilar:1.5m:217237"^^xsd:string ;
+    bot:Tag "217237"^^xsd:string ;
+    omg:hasGeometry inst:geom_1637 .
+
+inst:Column_3371 a beo:Column,
+        bot:Element ;
+    bot:ID "1_pvYd9oHESvH2fRuEov7v"^^xsd:string ;
+    bot:Name "POT:POT:226989"^^xsd:string ;
+    bot:Tag "226989"^^xsd:string ;
+    omg:hasGeometry inst:geom_3371 .
+
+inst:Column_3415 a beo:Column,
+        bot:Element ;
+    bot:ID "1_pvYd9oHESvH2fRuEovqz"^^xsd:string ;
+    bot:Name "POT:POT:227945"^^xsd:string ;
+    bot:Tag "227945"^^xsd:string ;
+    omg:hasGeometry inst:geom_3415 .
+
+inst:Column_5145 a beo:Column,
+        bot:Element ;
+    bot:ID "3JSOEpPYP2S9ut0YiPm4Cl"^^xsd:string ;
+    bot:Name "POT:POT:231558"^^xsd:string ;
+    bot:Tag "231558"^^xsd:string ;
+    omg:hasGeometry inst:geom_5145 .
+
+inst:Column_5187 a beo:Column,
+        bot:Element ;
+    bot:ID "3JSOEpPYP2S9ut0YiPm4Dd"^^xsd:string ;
+    bot:Name "POT:POT:231630"^^xsd:string ;
+    bot:Tag "231630"^^xsd:string ;
+    omg:hasGeometry inst:geom_5187 .
+
+inst:Column_6917 a beo:Column,
+        bot:Element ;
+    bot:ID "3JSOEpPYP2S9ut0YiPm452"^^xsd:string ;
+    bot:Name "POT:POT:232171"^^xsd:string ;
+    bot:Tag "232171"^^xsd:string ;
+    omg:hasGeometry inst:geom_6917 .
+
+inst:Column_6959 a beo:Column,
+        bot:Element ;
+    bot:ID "3JSOEpPYP2S9ut0YiPm43k"^^xsd:string ;
+    bot:Name "POT:POT:232263"^^xsd:string ;
+    bot:Tag "232263"^^xsd:string ;
+    omg:hasGeometry inst:geom_6959 .
+
+inst:Sensor_23261 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "1Sm6ioDNz9ZfRDinx3JY4i"^^xsd:string ;
+    bot:Name "EE1"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23261 .
+
+inst:Sensor_23277 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "2fwsz_fDb1ZvJaQhszW3Hy"^^xsd:string ;
+    bot:Name "G12"^^xsd:string ;
+    bot:Tag "gage-strain-sensor-µm/m"^^xsd:string ;
+    omg:hasGeometry inst:geom_23277 .
+
+inst:Sensor_23293 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "3CF3Mo0$jAXf13uK$ufHO9"^^xsd:string ;
+    bot:Name "G11"^^xsd:string ;
+    bot:Tag "gage-strain-sensor-µm/m"^^xsd:string ;
+    omg:hasGeometry inst:geom_23293 .
+
+inst:Sensor_23309 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "3EtHgcXmHDRfJMs3vuE3El"^^xsd:string ;
+    bot:Name "EP1"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23309 .
+
+inst:Sensor_23325 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "0kpXWyw$f8UPGjhssEEvrT"^^xsd:string ;
+    bot:Name "G22"^^xsd:string ;
+    bot:Tag "gage-strain-sensor-µm/m"^^xsd:string ;
+    omg:hasGeometry inst:geom_23325 .
+
+inst:Sensor_23341 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "0LR7i4dED4eRtDF8Y9Gx_J"^^xsd:string ;
+    bot:Name "G21"^^xsd:string ;
+    bot:Tag "gage-strain-sensor-µm/m"^^xsd:string ;
+    omg:hasGeometry inst:geom_23341 .
+
+inst:Sensor_23357 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "07fsTuzZr7KOstd3_vs9tZ"^^xsd:string ;
+    bot:Name "G32"^^xsd:string ;
+    bot:Tag "gage-strain-sensor-µm/m"^^xsd:string ;
+    omg:hasGeometry inst:geom_23357 .
+
+inst:Sensor_23373 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "0stYqUfon0RwE2OybuOR7V"^^xsd:string ;
+    bot:Name "G31"^^xsd:string ;
+    bot:Tag "gage-strain-sensor-µm/m"^^xsd:string ;
+    omg:hasGeometry inst:geom_23373 .
+
+inst:Sensor_23389 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "1dHXWaIkn1ZucjO3CjwYrW"^^xsd:string ;
+    bot:Name "G42"^^xsd:string ;
+    bot:Tag "gage-strain-sensor-µm/m"^^xsd:string ;
+    omg:hasGeometry inst:geom_23389 .
+
+inst:Sensor_23405 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "33PjwV__r6Rx5Xmrmm6RnT"^^xsd:string ;
+    bot:Name "G41"^^xsd:string ;
+    bot:Tag "gage-strain-sensor-µm/m"^^xsd:string ;
+    omg:hasGeometry inst:geom_23405 .
+
+inst:Sensor_23421 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "3lHyvfJTf108Iw_W5Iy0Rm"^^xsd:string ;
+    bot:Name "P42"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23421 .
+
+inst:Sensor_23437 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "2kFHo_qIPE5ws3rn5YtVJI"^^xsd:string ;
+    bot:Name "P41"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23437 .
+
+inst:Sensor_23453 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "31NM1$pGb0$wIROtvp9c_W"^^xsd:string ;
+    bot:Name "P32"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23453 .
+
+inst:Sensor_23469 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "2OBW6ViTPAhOgHK2BA3LIY"^^xsd:string ;
+    bot:Name "P31"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23469 .
+
+inst:Sensor_23485 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "00D8tFt357bQfhS4Y98Xek"^^xsd:string ;
+    bot:Name "P22"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23485 .
+
+inst:Sensor_23501 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "2wno7RlUz7YRQj9ojbLypP"^^xsd:string ;
+    bot:Name "P21"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23501 .
+
+inst:Sensor_23517 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "36iqfh3TPAyQGp5A0w2RoV"^^xsd:string ;
+    bot:Name "P12"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23517 .
+
+inst:Sensor_23533 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "0NhRbVeVP1rQ9365zwSP7i"^^xsd:string ;
+    bot:Name "P11"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23533 .
+
+inst:Sensor_23549 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "2hEM6jUcT9iBAlNe4zinfX"^^xsd:string ;
+    bot:Name "ACELV2"^^xsd:string ;
+    bot:Tag "accelerometer-acceleration-sensor-mm/s2"^^xsd:string ;
+    omg:hasGeometry inst:geom_23549 .
+
+inst:Sensor_23565 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "0oaR_tWFf9v8dpL2bd004o"^^xsd:string ;
+    bot:Name "ACELV3"^^xsd:string ;
+    bot:Tag "accelerometer-acceleration-sensor-mm/s2"^^xsd:string ;
+    omg:hasGeometry inst:geom_23565 .
+
+inst:Sensor_23581 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "1V5U$wKFfEP82tpg7$i37c"^^xsd:string ;
+    bot:Name "EE2"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23581 .
+
+inst:Sensor_23692 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "2Wnkyd6yf3QAtL6H4u3927"^^xsd:string ;
+    bot:Name "EP3"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23692 .
+
+inst:Sensor_23708 a bot:Element,
+        <https://w3id.org/mep#Sensor> ;
+    bot:ID "0kglzFrPDERfGHvTyNoeoX"^^xsd:string ;
+    bot:Name "EP2"^^xsd:string ;
+    bot:Tag "LVDT-displacement-sensor-mm"^^xsd:string ;
+    omg:hasGeometry inst:geom_23708 .
+
+inst:Slab_10424 a beo:FloorSlab,
+        bot:Element ;
+    bot:ID "08IKOYRpLChuuyk4_LMqt5"^^xsd:string ;
+    bot:Name "Suelo:Slab - 45cm:259781"^^xsd:string ;
+    bot:Tag "259781"^^xsd:string ;
+    omg:hasGeometry inst:geom_10424 .
+
+inst:Slab_10461 a beo:FloorSlab,
+        bot:Element ;
+    bot:ID "08IKOYRpLChuuyk4wLMqt5"^^xsd:string ;
+    bot:Name "Suelo:Slab - 45cm:259781"^^xsd:string ;
+    bot:Tag "259781"^^xsd:string ;
+    omg:hasGeometry inst:geom_10461 .
+
+inst:Slab_10497 a beo:FloorSlab,
+        bot:Element ;
+    bot:ID "08IKOYRpLChuuyk4cLMqt5"^^xsd:string ;
+    bot:Name "Suelo:Slab - 45cm:259781"^^xsd:string ;
+    bot:Tag "259781"^^xsd:string ;
+    omg:hasGeometry inst:geom_10497 .
+
+inst:Slab_10533 a beo:FloorSlab,
+        bot:Element ;
+    bot:ID "08IKOYRpLChuuyk4YLMqt5"^^xsd:string ;
+    bot:Name "Suelo:Slab - 45cm:259781"^^xsd:string ;
+    bot:Tag "259781"^^xsd:string ;
+    omg:hasGeometry inst:geom_10533 .
+
+inst:Slab_1079 a beo:BaseSlab,
+        bot:Element ;
+    bot:ID "01atcf5Jb6WvHnBcEkBs7D"^^xsd:string ;
+    bot:Name "Encepado-Rectangular:6.5 x 10 x 1.5 m:214014"^^xsd:string ;
+    bot:Tag "214014"^^xsd:string ;
+    omg:hasGeometry inst:geom_1079 .
+
+inst:Slab_1170 a beo:BaseSlab,
+        bot:Element ;
+    bot:ID "01atcf5Jb6WvHnBcEkBsRn"^^xsd:string ;
+    bot:Name "Encepado-Rectangular:6.5 x 10 x 1.5 m:214210"^^xsd:string ;
+    bot:Tag "214210"^^xsd:string ;
+    omg:hasGeometry inst:geom_1170 .
+
+inst:Slab_1231 a beo:BaseSlab,
+        bot:Element ;
+    bot:ID "01atcf5Jb6WvHnBcEkBsTh"^^xsd:string ;
+    bot:Name "Encepado-Rectangular:6.5 x 10 x 1.5 m:214360"^^xsd:string ;
+    bot:Tag "214360"^^xsd:string ;
+    omg:hasGeometry inst:geom_1231 .
+
+inst:Slab_13548 a beo:FloorSlab,
+        bot:Element ;
+    bot:ID "3FqlDmE9v6UOfQvy9Kryyg"^^xsd:string ;
+    bot:Name "Suelo:Slab - 35cm:272090"^^xsd:string ;
+    bot:Tag "272090"^^xsd:string ;
+    omg:hasGeometry inst:geom_13548 .
+
+inst:Slab_13628 a beo:FloorSlab,
+        bot:Element ;
+    bot:ID "3FqlDmE9v6UOfQvy1Kryuz"^^xsd:string ;
+    bot:Name "Suelo:Slab - 35cm:272333"^^xsd:string ;
+    bot:Tag "272333"^^xsd:string ;
+    omg:hasGeometry inst:geom_13628 .
+
+inst:Slab_13663 a beo:FloorSlab,
+        bot:Element ;
+    bot:ID "3FqlDmE9v6UOfQvy5Kryuz"^^xsd:string ;
+    bot:Name "Suelo:Slab - 35cm:272333"^^xsd:string ;
+    bot:Tag "272333"^^xsd:string ;
+    omg:hasGeometry inst:geom_13663 .
+
+inst:Slab_7693 a beo:BaseSlab,
+        bot:Element ;
+    bot:ID "2GAzKsSNv11B8TERzGo9pt"^^xsd:string ;
+    bot:Name "Encepado-Rectangular:10 x 16 x 2 m:249239"^^xsd:string ;
+    bot:Tag "249239"^^xsd:string ;
+    omg:hasGeometry inst:geom_7693 .
+
+inst:Slab_7756 a beo:BaseSlab,
+        bot:Element ;
+    bot:ID "2GAzKsSNv11B8TERzGo9ym"^^xsd:string ;
+    bot:Name "Encepado-Rectangular:16.2 x 14.5 x 1.5 m:249424"^^xsd:string ;
+    bot:Tag "249424"^^xsd:string ;
+    omg:hasGeometry inst:geom_7756 .
+
+inst:Wall_10358 a beo:Wall,
+        bot:Element ;
+    bot:ID "3bRs6ID5b6Ofwy42hxgyNm"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 60cm:258048"^^xsd:string ;
+    bot:Tag "258048"^^xsd:string ;
+    omg:hasGeometry inst:geom_10358 .
+
+inst:Wall_10744 a beo:Wall,
+        bot:Element ;
+    bot:ID "1zJabWmC59uwQbVBF1tZnz"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 15cm:262073"^^xsd:string ;
+    bot:Tag "262073"^^xsd:string ;
+    omg:hasGeometry inst:geom_10744 .
+
+inst:Wall_10820 a beo:Wall,
+        bot:Element ;
+    bot:ID "1zJabWmC59uwQbVBF1sSBh"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 15cm:262447"^^xsd:string ;
+    bot:Tag "262447"^^xsd:string ;
+    omg:hasGeometry inst:geom_10820 .
+
+inst:Wall_10887 a beo:Wall,
+        bot:Element ;
+    bot:ID "3051FLa5n01RzlwCgMUIWa"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 200cm:263142"^^xsd:string ;
+    bot:Tag "263142"^^xsd:string ;
+    omg:hasGeometry inst:geom_10887 .
+
+inst:Wall_12790 a beo:Wall,
+        bot:Element ;
+    bot:ID "0SoeZnop90beYfeCeWZ1yT"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 30cm:265920"^^xsd:string ;
+    bot:Tag "265920"^^xsd:string ;
+    omg:hasGeometry inst:geom_12790 .
+
+inst:Wall_12921 a beo:Wall,
+        bot:Element ;
+    bot:ID "0SoeZnop90beYfeCeWZ01t"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 30cm:266666"^^xsd:string ;
+    bot:Tag "266666"^^xsd:string ;
+    omg:hasGeometry inst:geom_12921 .
+
+inst:Wall_13029 a beo:Wall,
+        bot:Element ;
+    bot:ID "3$RtZLHAb4OxZxVy6n2wmJ"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 35cm:266920"^^xsd:string ;
+    bot:Tag "266920"^^xsd:string ;
+    omg:hasGeometry inst:geom_13029 .
+
+inst:Wall_13150 a beo:Wall,
+        bot:Element ;
+    bot:ID "3$RtZLHAb4OxZxVy6n2wfC"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 80cm:267511"^^xsd:string ;
+    bot:Tag "267511"^^xsd:string ;
+    omg:hasGeometry inst:geom_13150 .
+
+inst:Wall_13251 a beo:Wall,
+        bot:Element ;
+    bot:ID "3$RtZLHAb4OxZxVy6n2wVO"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 80cm:268643"^^xsd:string ;
+    bot:Tag "268643"^^xsd:string ;
+    omg:hasGeometry inst:geom_13251 .
+
+inst:Wall_13356 a beo:Wall,
+        bot:Element ;
+    bot:ID "3$RtZLHAb4OxZxVy6n2wHv"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 80cm:268994"^^xsd:string ;
+    bot:Tag "268994"^^xsd:string ;
+    omg:hasGeometry inst:geom_13356 .
+
+inst:Wall_13410 a beo:Wall,
+        bot:Element ;
+    bot:ID "3FqlDmE9v6UOfQvy9KryqG"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 15cm:271584"^^xsd:string ;
+    bot:Tag "271584"^^xsd:string ;
+    omg:hasGeometry inst:geom_13410 .
+
+inst:Wall_13477 a beo:Wall,
+        bot:Element ;
+    bot:ID "3FqlDmE9v6UOfQvy9KryoO"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 15cm:271720"^^xsd:string ;
+    bot:Tag "271720"^^xsd:string ;
+    omg:hasGeometry inst:geom_13477 .
+
+inst:Wall_7892 a beo:Wall,
+        bot:Element ;
+    bot:ID "2A8qBJsEjEExiNnabsXrNn"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 60cm:250017"^^xsd:string ;
+    bot:Tag "250017"^^xsd:string ;
+    omg:hasGeometry inst:geom_7892 .
+
+inst:Wall_8051 a beo:Wall,
+        bot:Element ;
+    bot:ID "3MFwuRRVH0eehwatrLJdX1"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 150cm:254411"^^xsd:string ;
+    bot:Tag "254411"^^xsd:string ;
+    omg:hasGeometry inst:geom_8051 .
+
+inst:Wall_8168 a beo:Wall,
+        bot:Element ;
+    bot:ID "3MFwuRRVH0eehwatrLJdqO"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 60cm:255122"^^xsd:string ;
+    bot:Tag "255122"^^xsd:string ;
+    omg:hasGeometry inst:geom_8168 .
+
+inst:Wall_8263 a beo:Wall,
+        bot:Element ;
+    bot:ID "3MFwuRRVH0eehwatrLJdyb"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 60cm:255663"^^xsd:string ;
+    bot:Tag "255663"^^xsd:string ;
+    omg:hasGeometry inst:geom_8263 .
+
+inst:Wall_8370 a beo:Wall,
+        bot:Element ;
+    bot:ID "3MFwuRRVH0eehwatrLJdzr"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 80cm:255743"^^xsd:string ;
+    bot:Tag "255743"^^xsd:string ;
+    omg:hasGeometry inst:geom_8370 .
+
+inst:Wall_8486 a beo:Wall,
+        bot:Element ;
+    bot:ID "3MFwuRRVH0eehwatrLJdxO"^^xsd:string ;
+    bot:Name "Muro básico:Retaining - 80cm:255826"^^xsd:string ;
+    bot:Tag "255826"^^xsd:string ;
+    omg:hasGeometry inst:geom_8486 .
+
+inst:geom_10211 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "049z9zq$f6uwNaZ1v2Mwes"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1024 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2e$bkiz591o9YpQbXczPc7"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10253 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "049z9zq$f6uwNaZ1v2MwdS"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10358 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3bRs6ID5b6Ofwy42hxgyNm"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10424 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "08IKOYRpLChuuyk4_LMqt5"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10461 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "08IKOYRpLChuuyk4wLMqt5"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10497 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "08IKOYRpLChuuyk4cLMqt5"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10533 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "08IKOYRpLChuuyk4YLMqt5"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10744 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1zJabWmC59uwQbVBF1tZnz"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1079 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "01atcf5Jb6WvHnBcEkBs7D"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10820 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1zJabWmC59uwQbVBF1sSBh"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_10887 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3051FLa5n01RzlwCgMUIWa"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1170 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "01atcf5Jb6WvHnBcEkBsRn"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1231 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "01atcf5Jb6WvHnBcEkBsTh"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_12634 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3051FLa5n01RzlwCgMUIpm"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_12676 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3051FLa5n01RzlwCgMUICB"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_12790 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "0SoeZnop90beYfeCeWZ1yT"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_12921 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "0SoeZnop90beYfeCeWZ01t"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13029 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3$RtZLHAb4OxZxVy6n2wmJ"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13150 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3$RtZLHAb4OxZxVy6n2wfC"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13251 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3$RtZLHAb4OxZxVy6n2wVO"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1326 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3goGOBY5TCiA0Xi9NY$r9L"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13356 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3$RtZLHAb4OxZxVy6n2wHv"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13410 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3FqlDmE9v6UOfQvy9KryqG"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13477 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3FqlDmE9v6UOfQvy9KryoO"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13548 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3FqlDmE9v6UOfQvy9Kryyg"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13628 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3FqlDmE9v6UOfQvy1Kryuz"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_13663 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3FqlDmE9v6UOfQvy5Kryuz"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1375 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3goGOBY5TCiA0Xi9NY$r69"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_141 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2e$bkiz591o9YpQbXczPc4"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1461 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3goGOBY5TCiA0Xi9NY$r7_"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1506 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3goGOBY5TCiA0Xi9NY$r1o"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1592 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3goGOBY5TCiA0Xi9NY$qyg"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_1637 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3goGOBY5TCiA0Xi9NY$q_l"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_17435 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GJypToFv3vBbA$MMwNx$w"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_17688 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GJypToFv3vBbA$MMwNxmy"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_17946 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GJypToFv3vBbA$MMwNxo6"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_18197 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GJypToFv3vBbA$MMwNxqe"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_18459 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GJypToFv3vBbA$MMwNxtf"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_18712 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GJypToFv3vBbA$MMwNwBN"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_18946 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GJypToFv3vBbA$MMwNwAJ"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_22825 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3CQqOBwfPCiuTz8ohQbc50"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_22831 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3pOmWRBHH3KePjwixneCex"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_22837 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2nvCQU4CjAOvHVibRvhbEh"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_22843 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1SrKSYssT0e9ifhZ3C6opi"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_22849 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3RebYL0RP1EuGeNYJdgoOt"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_22855 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3DuF8Mw6b3XQDF_SKX0Txz"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23261 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1Sm6ioDNz9ZfRDinx3JY4i"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23277 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2fwsz_fDb1ZvJaQhszW3Hy"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23293 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3CF3Mo0$jAXf13uK$ufHO9"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23309 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3EtHgcXmHDRfJMs3vuE3El"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23325 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "0kpXWyw$f8UPGjhssEEvrT"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23341 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "0LR7i4dED4eRtDF8Y9Gx_J"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23357 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "07fsTuzZr7KOstd3_vs9tZ"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23373 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "0stYqUfon0RwE2OybuOR7V"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23389 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1dHXWaIkn1ZucjO3CjwYrW"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23405 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "33PjwV__r6Rx5Xmrmm6RnT"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23421 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3lHyvfJTf108Iw_W5Iy0Rm"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23437 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2kFHo_qIPE5ws3rn5YtVJI"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23453 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "31NM1$pGb0$wIROtvp9c_W"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23469 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2OBW6ViTPAhOgHK2BA3LIY"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23485 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "00D8tFt357bQfhS4Y98Xek"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23501 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2wno7RlUz7YRQj9ojbLypP"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23517 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "36iqfh3TPAyQGp5A0w2RoV"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23533 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "0NhRbVeVP1rQ9365zwSP7i"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23549 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2hEM6jUcT9iBAlNe4zinfX"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23565 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "0oaR_tWFf9v8dpL2bd004o"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23581 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1V5U$wKFfEP82tpg7$i37c"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23692 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2Wnkyd6yf3QAtL6H4u3927"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_23708 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "0kglzFrPDERfGHvTyNoeoX"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_3371 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1_pvYd9oHESvH2fRuEov7v"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_3415 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1_pvYd9oHESvH2fRuEovqz"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_5145 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3JSOEpPYP2S9ut0YiPm4Cl"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_5187 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3JSOEpPYP2S9ut0YiPm4Dd"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_6917 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3JSOEpPYP2S9ut0YiPm452"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_6959 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3JSOEpPYP2S9ut0YiPm43k"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_7052 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1bO7MqHpr2YPZvqheewbAU"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_7307 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1bO7MqHpr2YPZvqheewYrj"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_7415 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1bO7MqHpr2YPZvqheewYqg"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_7522 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1bO7MqHpr2YPZvqheewYpI"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_7628 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "1bO7MqHpr2YPZvqheewYvn"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_7693 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GAzKsSNv11B8TERzGo9pt"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_7756 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2GAzKsSNv11B8TERzGo9ym"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_7892 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "2A8qBJsEjEExiNnabsXrNn"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_8051 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3MFwuRRVH0eehwatrLJdX1"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_8168 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3MFwuRRVH0eehwatrLJdqO"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_8263 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3MFwuRRVH0eehwatrLJdyb"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_8370 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3MFwuRRVH0eehwatrLJdzr"^^xsd:string ;
+    gom:hasFileSize 717823 .
+
+inst:geom_8486 a gom:MeshGeometry ;
+    fog:asIfc "./IFC-converter/tests/IFC/laplata-bridge.ifc"^^xsd:anyURI ;
+    fog:hasIfcId-guid "3MFwuRRVH0eehwatrLJdxO"^^xsd:string ;
+    gom:hasFileSize 717823 .
+

@@ -7,7 +7,7 @@ import os
 
 script_dir = pathlib.Path(__file__).parent
 config_path = (script_dir / 'config.json').resolve()
-ontology_config_file = (script_dir.parent / 'ontology-config.json').resolve()
+ontology_config_file = (script_dir / 'conversion-map.json').resolve()
 
 ### PARAMETERS
 with open(config_path, 'r',encoding='utf-8') as fp:
@@ -26,12 +26,6 @@ file = ifcopenshell.open(file_path)
 file_info = os.stat(file_path)
 file_size_bytes = file_info.st_size
 
-# load ifcOwl ontology -- when ontology is published read from online url
-ifc_graph_path =  "beo.ttl"
-print(ifc_graph_path)
-ifc_graph = Graph()
-ifc_graph.parse(ifc_graph_path, format = 'turtle')
-
 # urls
 if params['rdf-output']['base-url'].endswith('/'): asset_base_ref = params['rdf-output']['base-url'] 
 else: asset_base_ref = params['rdf-output']['base-url'] + '/'
@@ -44,21 +38,6 @@ else: save_path = params['rdf-output']['output-path'] + '/' + asset_name
 ### Load IFC schema (EXPRESS)
 schema_name = str(file.schema)
 schema = ifcopenshell.ifcopenshell_wrapper.schema_by_name(file.schema)
-
-# gets object property uris with label X of the entity class and its supertypes
-def get_attr_object_property(entity, attr_name): 
-    attr_query = """
-        SELECT ?property WHERE {{
-            {{ ?property rdfs:domain ?superclass .
-            <{}> rdfs:subClassOf* ?superclass .
-            ?property rdfs:label "{}" .}}
-        }}""".format(entity, attr_name)
-    
-    # Execute the query
-    results = ifc_graph.query(attr_query)
-    # Print the results
-    result  =  [item[0] for item in results]
-    return result[0]
 
 # gets object property uris with label X of the entity class and its supertypes
 def get_attributes(entity): 
@@ -93,6 +72,10 @@ g  = Graph()
 
 # Create a namespaces
 BEO = Namespace(beo_ref)
+BOT = Namespace("https://w3id.org/bot#")
+BROT =Namespace("https://w3id.org/brot#")
+BRCOMP =Namespace("https://w3id.org/brcomp#")
+BRIDGE =Namespace("https://w3id.org/bridge#")
 INST = Namespace(asset_ref)
 OMG = Namespace("https://w3id.org/omg#")
 FOG = Namespace("https://w3id.org/fog#")
@@ -106,6 +89,10 @@ OWL = Namespace("http://www.w3.org/2002/07/owl#")
 
 # Bind your custom prefix
 g.bind("beo", BEO)
+g.bind("brot", BROT)
+g.bind("bridge", BRCOMP)
+g.bind("brcomp", BRIDGE)
+g.bind("bot", BOT)
 g.bind('inst', INST)
 g.bind('rdf', RDF)
 g.bind('rdfs', RDFS)
@@ -118,7 +105,7 @@ g.bind('fog', FOG)
 g.bind('gom', GOM)
 
 g.add((asset_ref, RDF.type, OWL.Ontology ))
-g.add((asset_ref, OWL.imports, beo_ref ))
+
 
 
 created_types = {}
@@ -158,10 +145,41 @@ for declaration in schema.declarations():
             else: print(type)
             type_maps[declaration.name()]=type                
 
+#get aggregations
+aggr = {}
+aggregations = file.by_type('IfcRelAggregates')
+for agg in aggregations:
+    relating_object = agg.RelatingObject
+    relating_object_name = relating_object.is_a()
+    relating_instance_name = relating_object_name[3:] + '_' + str(relating_object.id())
+    relating_instance = INST[relating_instance_name]
+    aggr[relating_instance_name] = []
+    for related_object in agg.RelatedObjects:
+        related_object_name = related_object.is_a()
+        related_instance_name = related_object_name[3:] + '_' + str(related_object.id())
+        related_instance = INST[related_instance_name]
+        
+        if not relating_object.is_a('IfcSpatialElement'): continue
+        
+        elif relating_object.is_a('IfcSpatialElement') and related_object.is_a('IfcFacility') :
+            relation = BOT.hasBuilding
+        
+        elif relating_object.is_a('IfcSpatialElement') and related_object.is_a('IfcSpace') :
+            relation = BOT.hasSpace
+        
+        elif relating_object.is_a('IfcBuilding') and related_object.is_a('IfcBuildingStorey'):
+            relation = BOT.hasStorey
+        
+        else: relation = BOT.ContainsZone
+
+        g.add((relating_instance, relation, related_instance))
+
+
+
 ## non-geometrical information
 
 def create_entity(entity)-> URIRef:
-    
+
     # get the  IFC definition of the entity
     entity_schema = schema.declaration_by_name(entity.is_a())
 
@@ -169,28 +187,25 @@ def create_entity(entity)-> URIRef:
 
     instance_name = entity_name[3:] + '_' + str(entity.id())
 
-    entity_uri = BEO[config_file[entity_name[3:]]['class_name']]
+    entity_uris = [URIRef(url) for url in config_file[entity_name]['class']]
     instance_uri = INST[instance_name]
 
-    attrs = get_attributes(entity_uri)
-
-
     info = entity.get_info()
-    if 'PredefinedType' in info.keys() and info['PredefinedType'] in config_file[entity_name[3:]]['enum'].keys() :
-        entity_uri = BEO[config_file[entity_name[3:]]['enum'][info['PredefinedType']]['class_name']]
+    if 'PredefinedType' in info.keys() and info['PredefinedType'] in config_file[entity_name]['enum'].keys() :
+        entity_uris = [URIRef(url) for url in config_file[entity_name]['enum'][info['PredefinedType']]]
 
 
     if instance_uri not in created_entities.keys(): 
-        print(instance_uri)
         created_entities[instance_uri] = []
 
         #create instance
-        print(entity_uri)
-        g.add((instance_uri, RDF.type, entity_uri))
+        for entity_uri in entity_uris:
+            g.add((instance_uri, RDF.type, entity_uri))
 
         #create instance attributes
         attr_count = entity_schema.attribute_count()
 
+        attrs = config_file[entity_name]['attrs']
         for i in range(attr_count):
 
             attr =  entity_schema.attribute_by_index(i)
@@ -209,21 +224,13 @@ def create_entity(entity)-> URIRef:
                 else: pass
             else:
                 attr_name = attr.name()
-
-                if attr_name == 'GlobalId': 
-                    uuid_value = ifcopenshell.guid.split(ifcopenshell.guid.expand(attr_value))[1:-1]
-                    uuid_uri = attrs['uuid']
-                    ifc_id_uri = attrs['ifc-globalId']
-                    g.add((instance_uri, uuid_uri, Literal(uuid_value, datatype = XSD.string)))
-                    g.add((instance_uri, ifc_id_uri, Literal(attr_value, datatype = XSD.string)))
-                    continue
                 
                 if attr_name not in attrs.keys(): continue
                 
                 attr_type = attr.type_of_attribute()
 
                 #get object property uri
-                property_uri = attrs[attr_name]
+                property_uri = URIRef(attrs[attr_name])
 
                 if attr_type.as_named_type() or attr_type.as_simple_type():
 
@@ -244,18 +251,15 @@ def create_entity(entity)-> URIRef:
 
         # get the inverse attributes 
         inverse_attributes =  entity_schema.all_inverse_attributes()
-        for inv_attr  in inverse_attributes:
 
-            
+        inv_attrs = config_file[entity_name]['inv_attrs']
+        for inv_attr  in inverse_attributes:
+           
             inverse_attr_label = inv_attr.name()
 
-            if inverse_attr_label not in attrs.keys(): continue
-            
-
-
-            inv_attr_uri = attrs[inverse_attr_label]
+            if inverse_attr_label not in inv_attrs.keys(): continue
+            inv_attr_uri = URIRef(inv_attrs[inverse_attr_label])
             reference_entity= inv_attr.entity_reference()
-
 
             reference_entity_attrs = [item for item in reference_entity.all_attributes() if item.name() not in ['GlobalId','OwnerHistory', 'Name', 'Description', 'RelatedObjectsType', 'ActingRole', 'ConnectionGeometry', 'QuantityInProcess', 'SequenceType', 'TimeLag', 'UserDefinedSequenceType' ]]
             inverse_of_attr = inv_attr.attribute_reference()
@@ -263,7 +267,7 @@ def create_entity(entity)-> URIRef:
                         
             if len(reference_entity_attrs) > 2: continue
             
-            if len(reference_entity_attrs)==2:
+            if len(reference_entity_attrs) == 2:
                 for ref_attr in reference_entity_attrs:
                     if inverse_of_attr.name() != ref_attr.name():
                         reference_entity_attr = ref_attr #this wont work well if the ref  entity has more than 2 attrs
@@ -276,11 +280,11 @@ def create_entity(entity)-> URIRef:
                     content = getattr(relation, reference_entity_attr.name())
                     if isinstance(content, tuple) or isinstance(content, list):
                         for item in content:
-                            if item.is_a()[3:] not in config_file.keys(): continue
+                            if item.is_a() not in config_file.keys(): continue
                             property_item_uri = create_entity(item)
                             g.add((instance_uri, inv_attr_uri, property_item_uri))
                     else:
-                        if content.is_a()[3:] not in config_file.keys():  continue
+                        if content.is_a() not in config_file.keys():  continue
                         property_item_uri = create_entity(content)
                         g.add((instance_uri, inv_attr_uri, property_item_uri))                  
     
@@ -303,10 +307,11 @@ def create_geometry(entity, format,  output_path, output_name, file_size): #TODO
 if not params['geometry-output']['output-path'].endswith('/'): params['geometry-output']['output-path'] = params['geometry-output']['output-path'] +  '/'
 
 for entity in file:
-    if entity.is_a()[3:] in config_file.keys():
+    if entity.is_a() in config_file.keys():
         create_entity(entity)
         if params['geometry-output']['convert']: 
             create_geometry(entity, params['geometry-output']['output-format'], params['geometry-output']['output-path'], params['rdf-output']['output-name'],  file_size_bytes) 
+
 
 #process geometry file TODO
 geometry_file = file

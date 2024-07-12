@@ -1,8 +1,8 @@
 {   
-    "ifc-file-path": "D:/UPC_PhD/01.Ashvin/DEMOS/DEMO-7/CASTELLBISBAL/BIM/LLobregat_20240221.ifc",
+    "ifc-file-path": "D:/UPC_PhD/01.Ashvin/DEMOS/DEMO-6/MILE/BIM/MILE_PE_STR_U1.ifc",
     "rdf-output":{
-        "output-path": "D:/UPC_PhD/02.TUe-estancia/dev/ontologies/data",
-        "output-name": "llobregat-bridge",
+        "output-path": "./IFC-converter/tests/RDF",
+        "output-name": "bcn-building",
         "output-format": "ttl",
         "base-url": "http://0.0.0.0:5004/containers/cont_001/data/graph/"
     },
@@ -10,6 +10,6 @@
         "convert": true,
         "output-format": "ifc",
         "split": false,
-        "output-path":"./IFC-converter/tests/"
+        "output-path":"./IFC-converter/tests/IFC"
     }
 }
