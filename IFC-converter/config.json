@@ -1,8 +1,8 @@
 {   
-    "ifc-file-path": "D:/UPC_PhD/01.Ashvin/DEMOS/DEMO-6/MILE/BIM/MILE_PE_STR_U1.ifc",
+    "ifc-file-path": "IFC-converter/tests/IFC/llobregat-bridge.ifc",
     "rdf-output":{
         "output-path": "./IFC-converter/tests/RDF",
-        "output-name": "bcn-building",
+        "output-name": "llobregat-bridge",
         "output-format": "ttl",
         "base-url": "http://0.0.0.0:5004/containers/cont_001/data/graph/"
     },
