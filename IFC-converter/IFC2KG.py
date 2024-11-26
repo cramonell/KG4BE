@@ -173,6 +173,7 @@ for agg in aggregations:
         else: relation = BOT.ContainsZone
 
         g.add((relating_instance, relation, related_instance))
+        print(relating_instance, relation, related_instance)
 
 
 

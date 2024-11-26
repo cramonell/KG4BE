@@ -4,7 +4,7 @@
 @prefix brot: <https://w3id.org/brot#> .
 @prefix fog: <https://w3id.org/fog#> .
 @prefix gom: <https://w3id.org/gom#> .
-@prefix inst: <http://0.0.0.0:5004/containers/cont_001/data/graph/> .
+@prefix inst: <http://www.example.org/RoadNetworkManager/Bridges/data/> .
 @prefix omg: <https://w3id.org/omg#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +15,7 @@ inst:Site_30 a bot:Site,
         bot:Zone ;
     bot:ID "1IlyHTG9nB1ujF4mdysRKR"^^xsd:string ;
     bot:Name "My Site"^^xsd:string ;
-    bot:hasBuilding inst:Bridge_36 ;
+    bot:hasBuilding inst:PR-04-B015 ;
     omg:hasGeometry inst:geom_30 .
 
 inst:BridgePart_101 a bot:Zone ;
@@ -1090,7 +1090,7 @@ inst:BridgePart_89 a bot:Zone ;
     bot:Name "span-1"^^xsd:string ;
     omg:hasGeometry inst:geom_89 .
 
-inst:Bridge_36 a brcomp:BeamBridge,
+inst:PR-04-B015 a brcomp:BeamBridge,
         brcomp:GirderBridge,
         brot:Bridge ;
     bot:ContainsZone inst:BridgePart_42,
