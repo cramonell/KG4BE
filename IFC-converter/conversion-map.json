@@ -1,4 +1,4 @@
-{
+{"classes":{
     "IfcActuator": {
         "class": [
             "https://w3id.org/mep#Actuator",
@@ -5350,4 +5350,15 @@
         },
         "inv_attrs": {}
     }
-}
+},
+"psets":{
+    "Pset_product_damage_rating": {
+        "date": "https://example.org/damage_ontology#date",
+        "damage_rating": "https://example.org/damage_ontology#damage_rating",
+        "damage_category": "https://example.org/damage_ontology#damage_category"
+    }
+},
+"qsets":{
+    "Qto_example": {
+    }
+}}

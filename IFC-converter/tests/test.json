@@ -1,0 +1,742 @@
+{
+    "2e$bkiz591o9YpQbXczPc7": {
+        "psets": [
+            {
+                "name": "Pset_SiteCommon",
+                "Reference": "Superficie"
+            }
+        ],
+        "qsets": []
+    },
+    "01atcf5Jb6WvHnBcEkBs7D": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 65.0,
+                "NetArea": 64.9999999999999,
+                "GrossVolume": 97.4999999999999,
+                "NetVolume": 97.4999999999999,
+                "Perimeter": 33.0,
+                "Width": 1.5
+            }
+        ]
+    },
+    "01atcf5Jb6WvHnBcEkBsRn": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 64.9999999999999,
+                "NetArea": 64.9999999999999,
+                "GrossVolume": 97.4999999999998,
+                "NetVolume": 97.4999999999999,
+                "Perimeter": 33.0,
+                "Width": 1.5
+            }
+        ]
+    },
+    "01atcf5Jb6WvHnBcEkBsTh": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 64.9999999999999,
+                "NetArea": 64.9999999999999,
+                "GrossVolume": 97.4999999999998,
+                "NetVolume": 97.4999999999999,
+                "Perimeter": 33.0,
+                "Width": 1.5
+            }
+        ]
+    },
+    "3goGOBY5TCiA0Xi9NY$r9L": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "1.5m"
+            }
+        ],
+        "qsets": []
+    },
+    "3goGOBY5TCiA0Xi9NY$r69": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "1.5m"
+            }
+        ],
+        "qsets": []
+    },
+    "3goGOBY5TCiA0Xi9NY$r7_": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "1.5m"
+            }
+        ],
+        "qsets": []
+    },
+    "3goGOBY5TCiA0Xi9NY$r1o": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "1.5m"
+            }
+        ],
+        "qsets": []
+    },
+    "3goGOBY5TCiA0Xi9NY$qyg": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "1.5m"
+            }
+        ],
+        "qsets": []
+    },
+    "3goGOBY5TCiA0Xi9NY$q_l": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "1.5m"
+            }
+        ],
+        "qsets": []
+    },
+    "1_pvYd9oHESvH2fRuEov7v": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "1_pvYd9oHESvH2fRuEovqz": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "3JSOEpPYP2S9ut0YiPm4Cl": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "3JSOEpPYP2S9ut0YiPm4Dd": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "3JSOEpPYP2S9ut0YiPm452": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "3JSOEpPYP2S9ut0YiPm43k": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "1bO7MqHpr2YPZvqheewbAU": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 2.48729999939041,
+                "CrossSectionArea": 58.5631679099551,
+                "OuterSurfaceArea": 251.909361059204,
+                "GrossSurfaceArea": 681.952538790281,
+                "GrossVolume": 534.823197854179,
+                "NetVolume": 49.9403981780969,
+                "NetSurfaceArea": 117.12633581991
+            }
+        ]
+    },
+    "1bO7MqHpr2YPZvqheewYrj": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 21.0119373407887,
+                "CrossSectionArea": 552.297898859764,
+                "OuterSurfaceArea": 648.624893144065,
+                "GrossSurfaceArea": 675.2628330145,
+                "GrossVolume": 279.857361722644,
+                "NetVolume": 279.887306679127,
+                "NetSurfaceArea": 1104.59579771953
+            }
+        ]
+    },
+    "1bO7MqHpr2YPZvqheewYqg": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 4.00035773814413,
+                "CrossSectionArea": 81.720894711128,
+                "OuterSurfaceArea": 405.14918267644,
+                "GrossSurfaceArea": 835.192360407518,
+                "GrossVolume": 860.163276886306,
+                "NetVolume": 79.9117833190994,
+                "NetSurfaceArea": 163.441789422256
+            }
+        ]
+    },
+    "1bO7MqHpr2YPZvqheewYpI": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 4.00035006470094,
+                "CrossSectionArea": 81.7207762730404,
+                "OuterSurfaceArea": 405.148405523634,
+                "GrossSurfaceArea": 835.191583254711,
+                "GrossVolume": 860.161626930356,
+                "NetVolume": 79.9116300331758,
+                "NetSurfaceArea": 163.441552546081
+            }
+        ]
+    },
+    "1bO7MqHpr2YPZvqheewYvn": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 4.00035330089551,
+                "CrossSectionArea": 81.7208262230674,
+                "OuterSurfaceArea": 405.148733279717,
+                "GrossSurfaceArea": 835.191911010795,
+                "GrossVolume": 860.162322782055,
+                "NetVolume": 79.9116946799139,
+                "NetSurfaceArea": 163.441652446135
+            }
+        ]
+    },
+    "2GAzKsSNv11B8TERzGo9pt": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 160.0,
+                "NetArea": 160.0,
+                "GrossVolume": 320.0,
+                "NetVolume": 320.0,
+                "Perimeter": 52.0,
+                "Width": 2.0
+            }
+        ]
+    },
+    "2GAzKsSNv11B8TERzGo9ym": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 234.9,
+                "NetArea": 234.9,
+                "GrossVolume": 352.35,
+                "NetVolume": 352.35,
+                "Perimeter": 61.4,
+                "Width": 1.5
+            }
+        ]
+    },
+    "2A8qBJsEjEExiNnabsXrNn": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "Reference": "Retaining - 60cm",
+                "ThermalTransmittance": 1.74333333333333,
+                "ExtendToStructure": false
+            }
+        ],
+        "qsets": []
+    },
+    "3MFwuRRVH0eehwatrLJdX1": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 150cm",
+                "ThermalTransmittance": 0.697333333333333
+            }
+        ],
+        "qsets": []
+    },
+    "3MFwuRRVH0eehwatrLJdqO": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "Reference": "Retaining - 60cm",
+                "ExtendToStructure": false,
+                "ThermalTransmittance": 1.74333333333333
+            }
+        ],
+        "qsets": []
+    },
+    "3MFwuRRVH0eehwatrLJdyb": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "Reference": "Retaining - 60cm",
+                "ExtendToStructure": false,
+                "ThermalTransmittance": 1.74333333333333
+            }
+        ],
+        "qsets": []
+    },
+    "3MFwuRRVH0eehwatrLJdzr": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 80cm",
+                "ThermalTransmittance": 1.3075
+            }
+        ],
+        "qsets": []
+    },
+    "3MFwuRRVH0eehwatrLJdxO": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 80cm",
+                "ThermalTransmittance": 1.3075
+            }
+        ],
+        "qsets": []
+    },
+    "049z9zq$f6uwNaZ1v2Mwes": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "049z9zq$f6uwNaZ1v2MwdS": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "3bRs6ID5b6Ofwy42hxgyNm": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "Reference": "Retaining - 60cm",
+                "ExtendToStructure": false,
+                "ThermalTransmittance": 1.74333333333333
+            }
+        ],
+        "qsets": []
+    },
+    "08IKOYRpLChuuyk4_LMqt5": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 4.22928457206177,
+                "NetArea": 182.085092545327,
+                "GrossVolume": 1.90282832559172,
+                "NetVolume": 81.9274945401882,
+                "Perimeter": 34.7702796808432,
+                "Width": 0.449917307092934
+            }
+        ]
+    },
+    "08IKOYRpLChuuyk4wLMqt5": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 4.22883482562674,
+                "NetArea": 182.085092545327,
+                "GrossVolume": 1.90282832559172,
+                "NetVolume": 81.9274945401882,
+                "Perimeter": 34.7696061641788,
+                "Width": 0.449965156846653
+            }
+        ]
+    },
+    "08IKOYRpLChuuyk4cLMqt5": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 4.22930441282699,
+                "NetArea": 182.085092545327,
+                "GrossVolume": 1.90282832559172,
+                "NetVolume": 81.9274945401882,
+                "Perimeter": 34.7703119734528,
+                "Width": 0.449915196414017
+            }
+        ]
+    },
+    "08IKOYRpLChuuyk4YLMqt5": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 4.22883482562674,
+                "NetArea": 182.085092545327,
+                "GrossVolume": 1.90282832559172,
+                "NetVolume": 81.9274945401882,
+                "Perimeter": 34.7696061641788,
+                "Width": 0.449965156846653
+            }
+        ]
+    },
+    "1zJabWmC59uwQbVBF1tZnz": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 15cm",
+                "ThermalTransmittance": 6.97333333333333
+            }
+        ],
+        "qsets": []
+    },
+    "1zJabWmC59uwQbVBF1sSBh": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 15cm",
+                "ThermalTransmittance": 6.97333333333333
+            }
+        ],
+        "qsets": []
+    },
+    "3051FLa5n01RzlwCgMUIWa": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 200cm",
+                "ThermalTransmittance": 0.523
+            }
+        ],
+        "qsets": []
+    },
+    "3051FLa5n01RzlwCgMUIpm": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "3051FLa5n01RzlwCgMUICB": {
+        "psets": [
+            {
+                "name": "Pset_ReinforcementBarPitchOfColumn",
+                "Reference": "POT"
+            }
+        ],
+        "qsets": []
+    },
+    "0SoeZnop90beYfeCeWZ1yT": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 30cm",
+                "ThermalTransmittance": 3.48666666666667
+            }
+        ],
+        "qsets": []
+    },
+    "0SoeZnop90beYfeCeWZ01t": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 30cm",
+                "ThermalTransmittance": 3.48666666666667
+            }
+        ],
+        "qsets": []
+    },
+    "3$RtZLHAb4OxZxVy6n2wmJ": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 35cm",
+                "ThermalTransmittance": 2.98857142857143
+            }
+        ],
+        "qsets": []
+    },
+    "3$RtZLHAb4OxZxVy6n2wfC": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 80cm",
+                "ThermalTransmittance": 1.3075
+            }
+        ],
+        "qsets": []
+    },
+    "3$RtZLHAb4OxZxVy6n2wVO": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 80cm",
+                "ThermalTransmittance": 1.3075
+            }
+        ],
+        "qsets": []
+    },
+    "3$RtZLHAb4OxZxVy6n2wHv": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 80cm",
+                "ThermalTransmittance": 1.3075
+            }
+        ],
+        "qsets": []
+    },
+    "3FqlDmE9v6UOfQvy9KryqG": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 15cm",
+                "ThermalTransmittance": 6.97333333333333
+            }
+        ],
+        "qsets": []
+    },
+    "3FqlDmE9v6UOfQvy9KryoO": {
+        "psets": [
+            {
+                "name": "Pset_WallCommon",
+                "LoadBearing": true,
+                "IsExternal": true,
+                "ExtendToStructure": false,
+                "Reference": "Retaining - 15cm",
+                "ThermalTransmittance": 6.97333333333333
+            }
+        ],
+        "qsets": []
+    },
+    "3FqlDmE9v6UOfQvy9Kryyg": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 30.9961924324873,
+                "NetArea": 30.9961924324873,
+                "GrossVolume": 10.8486673513706,
+                "NetVolume": 10.8486673513706,
+                "Perimeter": 29.7846564874286,
+                "Width": 0.35
+            }
+        ]
+    },
+    "3FqlDmE9v6UOfQvy1Kryuz": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 2.37357748821286,
+                "NetArea": 51.0923262205211,
+                "GrossVolume": 0.830591465233365,
+                "NetVolume": 17.8788552304601,
+                "Perimeter": 21.2965885414561,
+                "Width": 0.349932314979421
+            }
+        ]
+    },
+    "3FqlDmE9v6UOfQvy5Kryuz": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_SlabBaseQuantities",
+                "GrossArea": 2.37305493834526,
+                "NetArea": 51.0923262205211,
+                "GrossVolume": 0.830408537396275,
+                "NetVolume": 17.8788552304601,
+                "Perimeter": 21.2935078367917,
+                "Width": 0.349932285164591
+            }
+        ]
+    },
+    "2GJypToFv3vBbA$MMwNx$w": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 5.98094979255947,
+                "CrossSectionArea": 166.397547288206,
+                "OuterSurfaceArea": 184.638349724118,
+                "GrossSurfaceArea": 211.858992136349,
+                "GrossVolume": 81.4026477943845,
+                "NetVolume": 81.4019416166305,
+                "NetSurfaceArea": 332.795094576413
+            }
+        ]
+    },
+    "2GJypToFv3vBbA$MMwNxmy": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 22.0273982295492,
+                "CrossSectionArea": 578.358225098713,
+                "OuterSurfaceArea": 679.971512914612,
+                "GrossSurfaceArea": 706.609452785048,
+                "GrossVolume": 293.382254770435,
+                "NetVolume": 293.420263092139,
+                "NetSurfaceArea": 1156.71645019743
+            }
+        ]
+    },
+    "2GJypToFv3vBbA$MMwNxo6": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 5.95512367315671,
+                "CrossSectionArea": 165.737805355367,
+                "OuterSurfaceArea": 183.841069654615,
+                "GrossSurfaceArea": 211.061712066847,
+                "GrossVolume": 81.0511460138054,
+                "NetVolume": 81.0504428853715,
+                "NetSurfaceArea": 331.475610710735
+            }
+        ]
+    },
+    "2GJypToFv3vBbA$MMwNxqe": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 22.039467541823,
+                "CrossSectionArea": 578.668732334322,
+                "OuterSurfaceArea": 680.34408476541,
+                "GrossSurfaceArea": 706.982024635845,
+                "GrossVolume": 293.543005577748,
+                "NetVolume": 293.581507462101,
+                "NetSurfaceArea": 1157.33746466864
+            }
+        ]
+    },
+    "2GJypToFv3vBbA$MMwNxtf": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 4.19796087039852,
+                "CrossSectionArea": 120.665697119059,
+                "OuterSurfaceArea": 129.595564952177,
+                "GrossSurfaceArea": 157.34537320624,
+                "GrossVolume": 58.2463046058091,
+                "NetVolume": 58.2374475421098,
+                "NetSurfaceArea": 241.331394238117
+            }
+        ]
+    },
+    "2GJypToFv3vBbA$MMwNwBN": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "Length": 16.8041328827895,
+                "CrossSectionArea": 444.363514062131,
+                "OuterSurfaceArea": 518.732695548241,
+                "GrossSurfaceArea": 545.370635418676,
+                "GrossVolume": 223.813740653279,
+                "NetVolume": 223.837688898495,
+                "NetSurfaceArea": 888.727028124261
+            }
+        ]
+    },
+    "2GJypToFv3vBbA$MMwNwAJ": {
+        "psets": [],
+        "qsets": [
+            {
+                "name": "Qto_BeamBaseQuantities",
+                "CrossSectionArea": 58.5397558906821,
+                "NetVolume": 49.9098036353732,
+                "NetSurfaceArea": 117.079511781364
+            }
+        ]
+    },
+    "2e$bkiz591o9YpQbXczPc4": {
+        "psets": [
+            {
+                "name": "Pset_BuildingSystemCommon",
+                "Reference": "Informaci\u00f3n de proyecto"
+            }
+        ],
+        "qsets": []
+    }
+}

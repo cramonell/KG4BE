@@ -5,6 +5,7 @@
 @prefix fog: <https://w3id.org/fog#> .
 @prefix gom: <https://w3id.org/gom#> .
 @prefix inst: <http://www.example.org/RoadNetworkManager/Bridges/data/> .
+@prefix ns1: <https://example.org/damage_ontology#> .
 @prefix omg: <https://w3id.org/omg#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +16,7 @@ inst:Site_30 a bot:Site,
         bot:Zone ;
     bot:ID "1IlyHTG9nB1ujF4mdysRKR"^^xsd:string ;
     bot:Name "My Site"^^xsd:string ;
-    bot:hasBuilding inst:PR-04-B015 ;
+    bot:hasBuilding inst:Bridge_36 ;
     omg:hasGeometry inst:geom_30 .
 
 inst:BridgePart_101 a bot:Zone ;
@@ -1090,7 +1091,7 @@ inst:BridgePart_89 a bot:Zone ;
     bot:Name "span-1"^^xsd:string ;
     omg:hasGeometry inst:geom_89 .
 
-inst:PR-04-B015 a brcomp:BeamBridge,
+inst:Bridge_36 a brcomp:BeamBridge,
         brcomp:GirderBridge,
         brot:Bridge ;
     bot:ContainsZone inst:BridgePart_42,
@@ -1185,6 +1186,9 @@ inst:ElementAssembly_136536 a beo:BracedFrame,
 
 inst:ElementAssembly_13716 a beo:BracedFrame,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0vLlu6KjL2eP7k33iKFUCE"^^xsd:string ;
     bot:Name "S1-F10"^^xsd:string ;
     omg:hasGeometry inst:geom_13716 .
@@ -1245,6 +1249,9 @@ inst:ElementAssembly_165541 a beo:BracedFrame,
 
 inst:ElementAssembly_16800 a beo:BracedFrame,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 4.92e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3rQUP_ImL7$fJ$LQhjK2WM"^^xsd:string ;
     bot:Name "S1-F8"^^xsd:string ;
     omg:hasGeometry inst:geom_16800 .
@@ -1311,6 +1318,9 @@ inst:ElementAssembly_197465 a beo:BracedFrame,
 
 inst:ElementAssembly_19880 a beo:BracedFrame,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2$l$aZSpb1JeYAmgCKaDne"^^xsd:string ;
     bot:Name "S1-F14"^^xsd:string ;
     omg:hasGeometry inst:geom_19880 .
@@ -1377,6 +1387,9 @@ inst:ElementAssembly_228692 a beo:BracedFrame,
 
 inst:ElementAssembly_22964 a beo:BracedFrame,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 3.15e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "175WlZby19xOnEf$Jek0s7"^^xsd:string ;
     bot:Name "S1-F12"^^xsd:string ;
     omg:hasGeometry inst:geom_22964 .
@@ -1443,6 +1456,9 @@ inst:ElementAssembly_259496 a beo:BracedFrame,
 
 inst:ElementAssembly_26056 a beo:BracedFrame,
         bot:Element ;
+    ns1:damage_category "II" ;
+    ns1:damage_rating 4.2e-01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2yxNiIK8n7dOJWtlO1iI9C"^^xsd:string ;
     bot:Name "S1-F6"^^xsd:string ;
     omg:hasGeometry inst:geom_26056 .
@@ -1509,6 +1525,9 @@ inst:ElementAssembly_290286 a beo:BracedFrame,
 
 inst:ElementAssembly_29142 a beo:BracedFrame,
         bot:Element ;
+    ns1:damage_category "IV" ;
+    ns1:damage_rating 2.56e+01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2LM1sJvOD8P8LdIO3vwm3n"^^xsd:string ;
     bot:Name "S1-F4"^^xsd:string ;
     omg:hasGeometry inst:geom_29142 .
@@ -1641,6 +1660,9 @@ inst:ElementAssembly_351912 a beo:BracedFrame,
 
 inst:ElementAssembly_35308 a beo:BracedFrame,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1RZBeOQz90HRJUbS$XCgfF"^^xsd:string ;
     bot:Name "S1-F16"^^xsd:string ;
     omg:hasGeometry inst:geom_35308 .
@@ -1707,6 +1729,9 @@ inst:ElementAssembly_382676 a beo:BracedFrame,
 
 inst:ElementAssembly_38386 a beo:BracedFrame,
         bot:Element ;
+    ns1:damage_category "IV" ;
+    ns1:damage_rating 1.164e+01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1MtZ5QFu5AugFzX3nY2I5w"^^xsd:string ;
     bot:Name "S1-F2"^^xsd:string ;
     omg:hasGeometry inst:geom_38386 .
@@ -1779,6 +1804,9 @@ inst:ElementAssembly_414665 a beo:RigidFrame,
 
 inst:ElementAssembly_41470 a beo:RigidFrame,
         bot:Element ;
+    ns1:damage_category "IV" ;
+    ns1:damage_rating 2.235e+01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1sAMwWpafAThYdxqsoCGHi"^^xsd:string ;
     bot:Name "S1-F15"^^xsd:string ;
     omg:hasGeometry inst:geom_41470 .
@@ -1827,6 +1855,9 @@ inst:ElementAssembly_434114 a beo:RigidFrame,
 
 inst:ElementAssembly_43604 a beo:RigidFrame,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 9.6e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1ND4Fpz7vFxRF4$CIDK0MM"^^xsd:string ;
     bot:Name "S1-F13"^^xsd:string ;
     omg:hasGeometry inst:geom_43604 .
@@ -1887,6 +1918,9 @@ inst:ElementAssembly_455283 a beo:RigidFrame,
 
 inst:ElementAssembly_45738 a beo:RigidFrame,
         bot:Element ;
+    ns1:damage_category "IV" ;
+    ns1:damage_rating 1.002e+01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3KhlQI7gH3_9D86HaYC2ZQ"^^xsd:string ;
     bot:Name "S1-F11"^^xsd:string ;
     omg:hasGeometry inst:geom_45738 .
@@ -1953,6 +1987,9 @@ inst:ElementAssembly_476623 a beo:RigidFrame,
 
 inst:ElementAssembly_47872 a beo:RigidFrame,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 9.6e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3P6HmAuCj8BQ24JmrZWm$$"^^xsd:string ;
     bot:Name "S1-F9"^^xsd:string ;
     omg:hasGeometry inst:geom_47872 .
@@ -2019,6 +2056,9 @@ inst:ElementAssembly_497963 a beo:RigidFrame,
 
 inst:ElementAssembly_50006 a beo:RigidFrame,
         bot:Element ;
+    ns1:damage_category "II" ;
+    ns1:damage_rating 4.2e-01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3jEEqIz6n5sQeCU6DHixy0"^^xsd:string ;
     bot:Name "S1-F7"^^xsd:string ;
     omg:hasGeometry inst:geom_50006 .
@@ -2085,6 +2125,9 @@ inst:ElementAssembly_519303 a beo:RigidFrame,
 
 inst:ElementAssembly_52140 a beo:RigidFrame,
         bot:Element ;
+    ns1:damage_category "IV" ;
+    ns1:damage_rating 2.235e+01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1k6wWq$XP9kxXooFUbq87Z"^^xsd:string ;
     bot:Name "S1-F5"^^xsd:string ;
     omg:hasGeometry inst:geom_52140 .
@@ -2139,6 +2182,9 @@ inst:ElementAssembly_538491 a beo:RigidFrame,
 
 inst:ElementAssembly_54274 a beo:RigidFrame,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3LG7dABLjClPs6Timtn29W"^^xsd:string ;
     bot:Name "S1-F3"^^xsd:string ;
     omg:hasGeometry inst:geom_54274 .
@@ -2181,6 +2227,9 @@ inst:ElementAssembly_563991 a beo:RigidFrame,
 
 inst:ElementAssembly_56408 a beo:RigidFrame,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 9.84e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "25yrlOEuD2wP$QqWdaF5s2"^^xsd:string ;
     bot:Name "S1-F1"^^xsd:string ;
     omg:hasGeometry inst:geom_56408 .
@@ -2277,6 +2326,9 @@ inst:Member_585241 a beo:StiffeningRib,
 
 inst:Member_58542 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 9.6e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "393D9Q8Bn5_fHmlWVknfKy"^^xsd:string ;
     bot:Name "S1-ST-1"^^xsd:string ;
     omg:hasGeometry inst:geom_58542 .
@@ -2289,6 +2341,9 @@ inst:Member_586311 a beo:StiffeningRib,
 
 inst:Member_58736 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 9.6e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3l4CDYDCr6YPeNLrvWeebL"^^xsd:string ;
     bot:Name "S1-ST-2"^^xsd:string ;
     omg:hasGeometry inst:geom_58736 .
@@ -2307,6 +2362,9 @@ inst:Member_588451 a beo:StiffeningRib,
 
 inst:Member_58930 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 9.6e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0tLTlIGVLEdvWfY95ewss2"^^xsd:string ;
     bot:Name "S1-ST-3"^^xsd:string ;
     omg:hasGeometry inst:geom_58930 .
@@ -2325,6 +2383,9 @@ inst:Member_590591 a beo:StiffeningRib,
 
 inst:Member_59124 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "IV" ;
+    ns1:damage_rating 2.74e+01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "11mlrw7eLFOQy9UCnH1tvn"^^xsd:string ;
     bot:Name "S1-ST-4"^^xsd:string ;
     omg:hasGeometry inst:geom_59124 .
@@ -2343,6 +2404,9 @@ inst:Member_592731 a beo:StiffeningRib,
 
 inst:Member_59318 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 9.6e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0tzY1y0enBlxB_S9FuxLYX"^^xsd:string ;
     bot:Name "S1-ST-5"^^xsd:string ;
     omg:hasGeometry inst:geom_59318 .
@@ -2361,6 +2425,9 @@ inst:Member_594871 a beo:StiffeningRib,
 
 inst:Member_59512 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "III" ;
+    ns1:damage_rating 9.6e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3aOizATiXEVeEfQdl1GYG7"^^xsd:string ;
     bot:Name "S1-ST-6"^^xsd:string ;
     omg:hasGeometry inst:geom_59512 .
@@ -2385,6 +2452,9 @@ inst:Member_596885 a beo:StiffeningRib,
 
 inst:Member_59706 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "II" ;
+    ns1:damage_rating 4.2e-01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1PkhqDDIv0hBT4zhuj9TkT"^^xsd:string ;
     bot:Name "S1-ST-7"^^xsd:string ;
     omg:hasGeometry inst:geom_59706 .
@@ -2397,6 +2467,9 @@ inst:Member_598215 a beo:StiffeningRib,
 
 inst:Member_59900 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "36QMFQiHTE5edD79mFXUAZ"^^xsd:string ;
     bot:Name "S1-ST-8"^^xsd:string ;
     omg:hasGeometry inst:geom_59900 .
@@ -2415,6 +2488,9 @@ inst:Member_600875 a beo:StiffeningRib,
 
 inst:Member_60094 a beo:StiffeningRib,
         bot:Element ;
+    ns1:damage_category "II" ;
+    ns1:damage_rating 6e-01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0K7Id6cnj6ZPlkOF3PaTS7"^^xsd:string ;
     bot:Name "S1-ST-9"^^xsd:string ;
     omg:hasGeometry inst:geom_60094 .
@@ -2835,12 +2911,18 @@ inst:Plate_60388 a beo:Plate,
 
 inst:Plate_60458 a beo:Plate,
         bot:Element ;
+    ns1:damage_category "IV" ;
+    ns1:damage_rating 1.14e+01 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0vpNF0GXr4KBjQeq4bkl2p"^^xsd:string ;
     bot:Name "S1-DIAG-L"^^xsd:string ;
     omg:hasGeometry inst:geom_60458 .
 
 inst:Plate_60540 a beo:Plate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1KByiEPkHAieNcIhlYZ$vL"^^xsd:string ;
     bot:Name "S1-DIAG-R"^^xsd:string ;
     omg:hasGeometry inst:geom_60540 .
@@ -2865,96 +2947,144 @@ inst:Plate_60722 a beo:Plate,
 
 inst:Plate_60792 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2mZxZ6_m5Ay8RHaDPq_mBc"^^xsd:string ;
     bot:Name "S1-FL16"^^xsd:string ;
     omg:hasGeometry inst:geom_60792 .
 
 inst:Plate_60842 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2hmZ_le790HAHJxNkEEokD"^^xsd:string ;
     bot:Name "S1-FL15"^^xsd:string ;
     omg:hasGeometry inst:geom_60842 .
 
 inst:Plate_60892 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0_qIAOkYPAPhHGPHfG1KPc"^^xsd:string ;
     bot:Name "S1-FL14"^^xsd:string ;
     omg:hasGeometry inst:geom_60892 .
 
 inst:Plate_60942 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "10w9gWJD99OgD6rRqkkSTZ"^^xsd:string ;
     bot:Name "S1-FL13"^^xsd:string ;
     omg:hasGeometry inst:geom_60942 .
 
 inst:Plate_60992 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0n1RbeBE928PnrjQ3XxXWZ"^^xsd:string ;
     bot:Name "S1-FL12"^^xsd:string ;
     omg:hasGeometry inst:geom_60992 .
 
 inst:Plate_61042 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3tfBOQVs55Qx$4kNCNFpQw"^^xsd:string ;
     bot:Name "S1-FL11"^^xsd:string ;
     omg:hasGeometry inst:geom_61042 .
 
 inst:Plate_61092 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "34PTXIPzL4RugWBR2k1IwD"^^xsd:string ;
     bot:Name "S1-FL10"^^xsd:string ;
     omg:hasGeometry inst:geom_61092 .
 
 inst:Plate_61142 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0QDelxdmvB1wHqL0GdbjG4"^^xsd:string ;
     bot:Name "S1-FL9"^^xsd:string ;
     omg:hasGeometry inst:geom_61142 .
 
 inst:Plate_61192 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2kySVc3tXBpOGR48mB8USj"^^xsd:string ;
     bot:Name "S1-FL8"^^xsd:string ;
     omg:hasGeometry inst:geom_61192 .
 
 inst:Plate_61242 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "28ufIDSoDA0gbYCjb81O$w"^^xsd:string ;
     bot:Name "S1-FL7"^^xsd:string ;
     omg:hasGeometry inst:geom_61242 .
 
 inst:Plate_61292 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1hZMu73P12_OEg8HrAGMlW"^^xsd:string ;
     bot:Name "S1-FL6"^^xsd:string ;
     omg:hasGeometry inst:geom_61292 .
 
 inst:Plate_61342 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2ajWg_NwH4BevW_fkHxoVb"^^xsd:string ;
     bot:Name "S1-FL5"^^xsd:string ;
     omg:hasGeometry inst:geom_61342 .
 
 inst:Plate_61392 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1HAYx_lNbE5wUFbhsZ6E5Z"^^xsd:string ;
     bot:Name "S1-FL4"^^xsd:string ;
     omg:hasGeometry inst:geom_61392 .
 
 inst:Plate_61442 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0fkWfwsoP9IghuypTervqM"^^xsd:string ;
     bot:Name "S1-FL3"^^xsd:string ;
     omg:hasGeometry inst:geom_61442 .
 
 inst:Plate_61492 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1PmrGbMKjC08P9Cew$qWYO"^^xsd:string ;
     bot:Name "S1-FL2"^^xsd:string ;
     omg:hasGeometry inst:geom_61492 .
 
 inst:Plate_61542 a beo:FlangePlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0PJdqEB4D3$hWCxlNF$b4p"^^xsd:string ;
     bot:Name "S1-FL1"^^xsd:string ;
     omg:hasGeometry inst:geom_61542 .
@@ -3015,54 +3145,81 @@ inst:Plate_61992 a beo:WebPlate,
 
 inst:Plate_62042 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1PwxO206L0jORpA1VYaKqx"^^xsd:string ;
     bot:Name "S1-W9-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62042 .
 
 inst:Plate_62092 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1Y46DjKmDBJA86_DIrnMXS"^^xsd:string ;
     bot:Name "S1-W8-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62092 .
 
 inst:Plate_62142 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "28E8WwFi15GPB7Fts78mYG"^^xsd:string ;
     bot:Name "S1-W7-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62142 .
 
 inst:Plate_62192 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3iLzJbUTT4bh4KnDmFdevx"^^xsd:string ;
     bot:Name "S1-W6-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62192 .
 
 inst:Plate_62242 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0eGKWUiD1BZwFeQCuMgHwH"^^xsd:string ;
     bot:Name "S1-W5-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62242 .
 
 inst:Plate_62292 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1WXDF$6W90KgR0nK13_Ox2"^^xsd:string ;
     bot:Name "S1-W4-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62292 .
 
 inst:Plate_62342 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3Ilei3ppj1H8kFyts7_Xv7"^^xsd:string ;
     bot:Name "S1-W3-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62342 .
 
 inst:Plate_62392 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1dc$9fPKfDKf50XdBwHLuQ"^^xsd:string ;
     bot:Name "S1-W2-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62392 .
 
 inst:Plate_62442 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "1GSIMprDLAgRB38LhivqKh"^^xsd:string ;
     bot:Name "S1-W1-L"^^xsd:string ;
     omg:hasGeometry inst:geom_62442 .
@@ -3099,54 +3256,81 @@ inst:Plate_62692 a beo:WebPlate,
 
 inst:Plate_62742 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0PMJwHwuX7zue4qQSF5CNr"^^xsd:string ;
     bot:Name "S1-W9-R"^^xsd:string ;
     omg:hasGeometry inst:geom_62742 .
 
 inst:Plate_62792 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2FAsUdwZzAGurr9Ui0hov$"^^xsd:string ;
     bot:Name "S1-W8-R"^^xsd:string ;
     omg:hasGeometry inst:geom_62792 .
 
 inst:Plate_62842 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2TXD0O_e9DwvfvgQR7ps4P"^^xsd:string ;
     bot:Name "S1-W7-R"^^xsd:string ;
     omg:hasGeometry inst:geom_62842 .
 
 inst:Plate_62892 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2hFaBtAvv2QQVdR230v3Tu"^^xsd:string ;
     bot:Name "S1-W6-R"^^xsd:string ;
     omg:hasGeometry inst:geom_62892 .
 
 inst:Plate_62942 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "2BxHarAXf229JJ0cm07udd"^^xsd:string ;
     bot:Name "S1-W5-R"^^xsd:string ;
     omg:hasGeometry inst:geom_62942 .
 
 inst:Plate_62992 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3e5Qul0c55WOxTVDc3KRlm"^^xsd:string ;
     bot:Name "S1-W4-R"^^xsd:string ;
     omg:hasGeometry inst:geom_62992 .
 
 inst:Plate_63042 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "0cAckCaDHEFgnkLj1Vrust"^^xsd:string ;
     bot:Name "S1-W3-R"^^xsd:string ;
     omg:hasGeometry inst:geom_63042 .
 
 inst:Plate_63092 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3SB0VMzUv0f8FuHG5vS$Ii"^^xsd:string ;
     bot:Name "S1-W2-R"^^xsd:string ;
     omg:hasGeometry inst:geom_63092 .
 
 inst:Plate_63142 a beo:WebPlate,
         bot:Element ;
+    ns1:damage_category "I" ;
+    ns1:damage_rating 0e+00 ;
+    ns1:date "2023-10-12" ;
     bot:ID "3_SgOPno5FGu01Ldin3w_I"^^xsd:string ;
     bot:Name "S1-W1-R"^^xsd:string ;
     omg:hasGeometry inst:geom_63142 .

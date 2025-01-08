@@ -106,8 +106,6 @@ g.bind('gom', GOM)
 
 g.add((asset_ref, RDF.type, OWL.Ontology ))
 
-
-
 created_types = {}
 created_entities = {}
 created_sets = []
@@ -173,13 +171,50 @@ for agg in aggregations:
         else: relation = BOT.ContainsZone
 
         g.add((relating_instance, relation, related_instance))
-        print(relating_instance, relation, related_instance)
+
+#create property and qauntity sets dictionary
+properties = {}
+# get properties
+p_rels = file.by_type('IfcRelDefinesByProperties')
+
+
+for rel in p_rels:
+    property={
+        "name":""
+    }
+    p =  rel.RelatingPropertyDefinition
+    property["name"] =  p.Name
+    if p.is_a('IfcElementQuantity'):
+        for quantity in p.Quantities:
+            if quantity.is_a('IfcQuantityArea'):
+                property[quantity.Name] = quantity.AreaValue
+            if quantity.is_a('IfcQuantityCount'):
+                property[quantity.Name] = quantity.CountValue
+            if quantity.is_a('IfcQuantityLength'):
+                property[quantity.Name] = quantity.LengthValue
+            if quantity.is_a('IfcQuantityNumber'):
+                property[quantity.Name] = quantity.NumberValue
+            if quantity.is_a('IfcQuantityTime'):
+                property[quantity.Name] = quantity.TimeValue
+            if quantity.is_a('IfcQuantityVolume'):
+                property[quantity.Name] = quantity.VolumeValue
+            if quantity.is_a('IfcQuantityWeight'):
+                property[quantity.Name] = quantity.WeightValue
+    elif p.is_a('IfcPropertySet'):
+        for prop in p.HasProperties:
+            property[prop.Name] = prop.NominalValue.wrappedValue
+    for object in rel.RelatedObjects:
+        properties[object.GlobalId]={'psets':[], 'qsets':[]}
+        if p.is_a('IfcElementQuantity'):
+            properties[object.GlobalId]['qsets'].append(property)
+        elif p.is_a('IfcPropertySet'):
+            properties[object.GlobalId]['psets'].append(property)
 
 
 
 ## non-geometrical information
 
-def create_entity(entity)-> URIRef:
+def create_entity(entity, )-> URIRef:
 
     # get the  IFC definition of the entity
     entity_schema = schema.declaration_by_name(entity.is_a())
@@ -188,14 +223,14 @@ def create_entity(entity)-> URIRef:
 
     instance_name = entity_name[3:] + '_' + str(entity.id())
 
-    entity_uris = [URIRef(url) for url in config_file[entity_name]['class']]
+    entity_uris = [URIRef(url) for url in config_file['classes'][entity_name]['class']]
     instance_uri = INST[instance_name]
 
     info = entity.get_info()
-    if 'PredefinedType' in info.keys() and info['PredefinedType'] in config_file[entity_name]['enum'].keys() :
-        entity_uris = [URIRef(url) for url in config_file[entity_name]['enum'][info['PredefinedType']]]
 
-
+    if 'PredefinedType' in info.keys() and info['PredefinedType'] in config_file['classes'][entity_name]['enum'].keys() :
+        entity_uris = [URIRef(url) for url in config_file['classes'][entity_name]['enum'][info['PredefinedType']]]
+    
     if instance_uri not in created_entities.keys(): 
         created_entities[instance_uri] = []
 
@@ -203,10 +238,28 @@ def create_entity(entity)-> URIRef:
         for entity_uri in entity_uris:
             g.add((instance_uri, RDF.type, entity_uri))
 
+        #add psets and qsets
+        if info['GlobalId'] in properties.keys():
+            psets = properties[info['GlobalId']]['psets']
+            qsets = properties[info['GlobalId']]['qsets']
+
+            for pset  in psets:
+                if pset['name'] in config_file['psets'].keys():
+                    for key in config_file['psets'][pset['name']].keys():
+                        g.add((instance_uri, URIRef(config_file['psets'][pset['name']][key]), Literal(pset[key])))
+                        print((instance_uri, URIRef(config_file['psets'][pset['name']][key]), Literal(pset[key])))
+            for qset  in qsets:
+                if qset['name'] in config_file['qsets'].keys():
+                    for key in config_file['qsets'][qset['name']].keys():
+                        g.add((instance_uri, URIRef(config_file['qsets'][qset['name']][key]), Literal(pset[key])))
+                        print((instance_uri, URIRef(config_file['qsets'][qset['name']][key]), Literal(pset[key])))
+
+
+
         #create instance attributes
         attr_count = entity_schema.attribute_count()
 
-        attrs = config_file[entity_name]['attrs']
+        attrs = config_file['classes'][entity_name]['attrs']
         for i in range(attr_count):
 
             attr =  entity_schema.attribute_by_index(i)
@@ -245,7 +298,7 @@ def create_entity(entity)-> URIRef:
                         g.add((instance_uri, property_uri, Literal(attr_value, datatype=URIRef(type_maps[attr_type.declared_type().name()]))))  
                     
                     elif attr_declaration.as_entity():
-                        if attr_value.is_a() in config_file.keys():
+                        if attr_value.is_a() in config_file['classes'].keys():
                             property_item_uri = create_entity(attr_value)
                             g.add((instance_uri, property_uri, property_item_uri))
                                                    
@@ -253,7 +306,8 @@ def create_entity(entity)-> URIRef:
         # get the inverse attributes 
         inverse_attributes =  entity_schema.all_inverse_attributes()
 
-        inv_attrs = config_file[entity_name]['inv_attrs']
+
+        inv_attrs = config_file['classes'][entity_name]['inv_attrs']
         for inv_attr  in inverse_attributes:
            
             inverse_attr_label = inv_attr.name()
@@ -281,11 +335,11 @@ def create_entity(entity)-> URIRef:
                     content = getattr(relation, reference_entity_attr.name())
                     if isinstance(content, tuple) or isinstance(content, list):
                         for item in content:
-                            if item.is_a() not in config_file.keys(): continue
+                            if item.is_a() not in config_file['classes'].keys(): continue
                             property_item_uri = create_entity(item)
                             g.add((instance_uri, inv_attr_uri, property_item_uri))
                     else:
-                        if content.is_a() not in config_file.keys():  continue
+                        if content.is_a() not in config_file['classes'].keys():  continue
                         property_item_uri = create_entity(content)
                         g.add((instance_uri, inv_attr_uri, property_item_uri))                  
     
@@ -308,7 +362,7 @@ def create_geometry(entity, format,  output_path, output_name, file_size): #TODO
 if not params['geometry-output']['output-path'].endswith('/'): params['geometry-output']['output-path'] = params['geometry-output']['output-path'] +  '/'
 
 for entity in file:
-    if entity.is_a() in config_file.keys():
+    if entity.is_a() in config_file['classes'].keys():
         create_entity(entity)
         if params['geometry-output']['convert']: 
             create_geometry(entity, params['geometry-output']['output-format'], params['geometry-output']['output-path'], params['rdf-output']['output-name'],  file_size_bytes) 
