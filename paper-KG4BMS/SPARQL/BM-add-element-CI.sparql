@@ -1,0 +1,62 @@
+PREFIX iopce: <http://www.w3id.org/iopce#>
+PREFIX opm: <http://www.w3id.org/opm#>
+PREFIX schema: <https://schema.org/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX bot: <http://www.w3id.org/bot#>
+PREFIX dot: <http://www.w3id.org/dot#>
+PREFIX BMS: <http://www.example.org/BMS#>
+
+INSERT{
+#create condition index property and the current state value and time
+?element iopce:indice_de_condicion  ?conditionIndex . 
+?conditionIndex opm:hasPropertyState ?conditionIndexState .
+?conditionIndexState a  opm:CurrentPropertyState;
+    schema:value ?conditionIndexStateValue ;
+    prov:generatedAtTime ?inspectionTime
+}
+WHERE{
+BMS:PR-04-B015-IB01  prov:startedAtTime ?inspectionTime
+{SELECT ?element (SUM(?sum_indexes) AS ?conditionIndexStateValue)  
+WHERE{
+
+    {SELECT ?element  ?sum_indexes
+    WHERE{
+    # select elements that were inspected 
+    BMS:PR-04-B015-IB01 dot:coveredByInspection ?element . 
+    ?element a bot:Element .
+
+    # select damages associated with those elements
+    ?element dot:hasDamage ?damage .						
+
+    # get the inpection properties
+    ?damage iopce:extension ?extension ;					
+        iopce:gravedad ?intensity ;
+        iopce:evolucion ?evolution .
+    
+    # get the values of the current property states
+    ?extension opm:hasPropertyState ?extesnionState .  		
+    ?extesnionState a opm:CurrentPropertyState ;
+        schema:value ?extensionValue .
+
+    ?intensity opm:hasPropertyState ?intensityState .
+    ?intensityState a opm:CurrentPropertyState ;
+        schema:value ?intensityValue .
+
+    ?evolution opm:hasPropertyState ?evolutionState .
+    ?evolutionState a opm:CurrentPropertyState ;
+        schema:value ?evolutionValue .
+    
+    # return the sum of the three indexes to the parent WHERE clause
+    BIND(?evolutionValue + ?intensityValue + ?extensionValue AS ?sum_indexes) 
+    }  }
+} GROUP BY ?element}
+
+# only if there is no condition index asociated to the element
+FILTER NOT EXISTS {?element iopce:indice_de_condicion  ?any.} 
+
+# create condition index IRI
+BIND(IRI(CONCAT(str(?element), '-conditionindex' )) AS ?conditionIndex) 
+
+# create condition index state IRI
+BIND(IRI(CONCAT(str(?conditionIndex),"-S",str(YEAR(?inspectionTime)), str(MONTH(?inspectionTime)), str(DAY(?inspectionTime)))) AS ?conditionIndexState) 
+}

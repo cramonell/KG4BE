@@ -64,7 +64,7 @@ The conversion map is contained in the *conversion-map.json* file. This file con
 ```
 This is the way the converter associates the classes, attributes, inverse relations, and enumerations to existing ontologies.
 
-At the moment, the following ontologies are considered for  the conversion:
+At the moment, the following ontologies are default for the conversion:
 
 | Name | URI | 
 | :------------ | :--------------: 

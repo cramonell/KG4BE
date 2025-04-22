@@ -1,0 +1,9 @@
+PREFIX brot: <http://www.w3id.org/brot#>
+PREFIX BMS: <http://www.example.org/BMS#>
+
+INSERT{BMS:PR-04-B015 brot:locatedBelow  ?roadLink_1.
+BMS:PR-04-B015 brot:locatedBelow  ?roadLink_2}
+WHERE{
+    BIND(BMS:80540097596 AS ?roadLink_1) 
+    BIND (BMS:81580000268 AS ?roadLink_2)
+}

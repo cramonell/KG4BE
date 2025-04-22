@@ -1,0 +1,47 @@
+PREFIX dot: <http://www.w3id.org/dot#>
+PREFIX sdo: <http://www.w3id.org/sdo#>
+PREFIX seas: <http://www.w3id.org/seas/FeatureOfInterestOntology#>
+PREFIX iopce: <http://www.w3id.org/iopce#>
+PREFIX opm: <http://www.w3id.org/opm#>
+PREFIX schema: <https://schema.org/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX BMS: <http://www.example.org/BMS#>
+
+INSERT {
+?damage a dot:ClassifiedDamage, sdo:Corrosion, seas:FeatureOfInterest ;
+    iopce:extension ?extension ;
+    iopce:gravedad ?intensity ;
+    iopce:evolucion ?evolution  .
+BMS:ElementAssembly_56408 dot:hasDamage ?damage .
+
+?damage dot:coveredByInspection BMS:PR-04-B015-IB01 .
+
+?extension a iopce:PropiedadExtension ;
+    opm:hasPropertyState  ?ExtensionState .
+?ExtensionState a opm:CurrentPropertyState ;
+    schema:value "1"^^xsd:integer ;
+    prov:generatedAtTime "2018-03-22T10:00:00"^^xsd:dateTime ;
+    prov:wasGeneratedBy BMS:PR-04-B015-IB01 .
+
+?intensity a iopce:PropiedadGravedad ;
+    opm:hasPropertyState  ?IntensityState .
+?IntensityState a opm:CurrentPropertyState ;
+    schema:value "0"^^xsd:integer ;
+    prov:generatedAtTime "2018-03-22T10:00:00"^^xsd:dateTime ;
+    prov:wasGeneratedBy BMS:PR-04-B015-IB01 .
+
+?evolution a iopce:PropiedadEvolucion ;
+    opm:hasPropertyState  ?EvolutionState .
+?EvolutionState a opm:CurrentPropertyState ;
+    schema:value "1"^^xsd:integer ;
+    prov:generatedAtTime "2018-03-22T10:00:00"^^xsd:dateTime ;
+    prov:wasGeneratedBy BMS:PR-04-B015-IB01 .
+} WHERE {
+BIND(BMS:56408-C1 AS ?damage)
+BIND(BMS:56408-C1-extension AS ?extension)
+BIND(BMS:56408-C1-intensity AS ?intensity)
+BIND(BMS:56408-C1-evolution AS ?evolution)
+BIND(BMS:56408-C1-extension-S20180322 AS ?ExtensionState)
+BIND(BMS:56408-C1-intensity-S20180322 AS ?IntensityState)
+BIND(BMS:56408-C1-evolution-S20180322 AS ?EvolutionState)
+}

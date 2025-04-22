@@ -1,0 +1,52 @@
+PREFIX iopce: <http://www.w3id.org/iopce#>
+PREFIX opm: <http://www.w3id.org/opm#>
+PREFIX schema: <https://schema.org/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX bot: <http://www.w3id.org/bot#>
+PREFIX BMS: <http://www.example.org/BMS#>
+
+DELETE{
+?previousZoneConditionIndexState a opm:CurrentPropertyState
+}
+INSERT{
+?previousZoneConditionIndexState a opm:PropertyState .
+
+#create condition index  current state value and time
+?zoneConditionIndex opm:hasPropertyState ?currentZoneConditionIndexState . 
+?currentZoneConditionIndexState a  opm:CurrentPropertyState;
+    schema:value ?zoneConditionIndexStateValue ;
+    prov:generatedAtTime ?evaluationTime
+}WHERE{
+#get the zone condition index as the sum of all the damage indexes of the elements that it contains
+{SELECT ?zone (SUM(?elementConditionIndexStateValue) as ?zoneConditionIndexStateValue)
+WHERE{
+        {
+        SELECT DISTINCT ?element ?elementConditionIndexStateValue
+        WHERE{
+            BMS:PR-04-B015 bot:containsZone+ ?A .
+            ?B bot:containsElement ?element .
+
+            ?element iopce:indice_de_condicion ?conditionIndex .
+            ?conditionIndex opm:hasPropertyState ?conditionIndexState .
+            ?conditionIndexState a opm:CurrentPropertyState ;
+                schema:value ?elementConditionIndexStateValue .
+            }
+        }
+        ?zone bot:containsElement ?element
+
+    }GROUP BY ?zone
+}
+
+# only if there is no condition index asociated to the zone
+FILTER EXISTS {?zone iopce:indice_de_condicion  ?zoneConditionIndex.} 
+
+# get condition index, condition the current condition index state and assign it as previous
+?zone iopce:indice_de_condicion  ?zoneConditionIndex . 		
+?zoneConditionIndex opm:hasPropertyState ?previousZoneConditionIndexState .
+?previousZoneConditionIndexState a  opm:CurrentPropertyState.
+
+# assign evaluation time
+BIND ( NOW() AS ?evaluationTime)
+
+# create condition index state IRI
+BIND(IRI(CONCAT(str(?zoneConditionIndex),"-S",str(YEAR(?evaluationTime)), str(MONTH(?evaluationTime)), str(DAY(?evaluationTime)), str(HOURS(?evaluationTime)), str(MINUTES(?evaluationTime)), str(SECONDS(?evaluationTime)))) AS ?currentZoneConditionIndexState)
