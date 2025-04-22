@@ -5,11 +5,11 @@ import json
 import pathlib
 import os
 
+## Load configuration files
 script_dir = pathlib.Path(__file__).parent
 config_path = (script_dir / 'config.json').resolve()
 ontology_config_file = (script_dir / 'conversion-map.json').resolve()
 
-### PARAMETERS
 with open(config_path, 'r',encoding='utf-8') as fp:
     params =json.load(fp)
 

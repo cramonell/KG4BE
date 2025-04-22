@@ -1,0 +1,26 @@
+PREFIX iopce: <http://www.w3id.org/iopce#>
+PREFIX dot: <http://www.w3id.org/dot#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX BMS: <http://www.example.org/BMS#>
+
+INSERT {
+?inspection a iopce:InspeccionPrincipal, dot:Inspection, prov:Activity .
+?inspection prov:startedAtTime ?time .
+?inspection iopce:code ?code .
+?inspection dot:description ?description .
+?inspection dot:coveredByInspection ?element .
+}WHERE {
+BIND(BMS:PR-04-B015-IB01 AS ?inspection)
+BIND("PR-04-B015-IB01" AS ?code)
+BIND("Test Inspection" AS ?description)
+BIND("2018-03-22T12:00:00"^^xsd:dateTime AS ?time)
+VALUES ?element {
+    BMS:ElementAssembly_13716
+    BMS:ElementAssembly_16800
+    BMS:ElementAssembly_19880
+    BMS:ElementAssembly_22964
+    BMS:ElementAssembly_26056
+    BMS:ElementAssembly_29142
+    ...
+    }
+}

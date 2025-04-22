@@ -1,0 +1,38 @@
+PREFIX iopce: <http://www.w3id.org/iopce#>
+PREFIX opm: <http://www.w3id.org/opm#>
+PREFIX schema: <https://schema.org/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX bot: <http://www.w3id.org/bot#>
+PREFIX BMS: <http://www.example.org/BMS#>
+
+INSERT{?zone iopce:indice_de_condicion  ?zoneConditionIndex . #create condition index property and the current state value and time
+?zoneConditionIndex opm:hasPropertyState ?zoneConditionIndexState .
+?zoneConditionIndexState a  opm:CurrentPropertyState;
+    schema:value ?zoneConditionIndexStateValue ;
+    prov:generatedAtTime ?evaluationTime .
+}WHERE{
+#get the zone condition index as the sum of all the damage indexes of the elements that it contains
+{SELECT ?zone (SUM(?elementConditionIndexStateValue) as ?zoneConditionIndexStateValue)
+WHERE{
+    {SELECT DISTINCT ?element ?elementConditionIndexStateValue
+    WHERE{
+        BMS:PR-04-B015 bot:containsZone+ ?A .
+        ?B bot:containsElement ?element .
+
+        ?element iopce:indice_de_condicion ?conditionIndex .
+        ?conditionIndex opm:hasPropertyState ?conditionIndexState .
+        ?conditionIndexState a opm:CurrentPropertyState ;
+            schema:value ?elementConditionIndexStateValue .
+        }
+    }
+    ?zone bot:containsElement ?element
+
+    }GROUP BY ?zone
+}
+
+FILTER NOT EXISTS {?zone iopce:indice_de_condicion  ?any.} # only if there is no condition index asociated to the zone
+
+BIND ( NOW() AS ?evaluationTime)
+BIND(IRI(CONCAT(str(?zone), '-conditionindex' )) AS ?zoneConditionIndex) # create condition index IRI
+BIND(IRI(CONCAT(str(?zoneConditionIndex),"-S",str(YEAR(?evaluationTime)), str(MONTH(?evaluationTime)), str(DAY(?evaluationTime)))) AS ?zoneConditionIndexState) # create condition index 
+}

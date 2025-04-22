@@ -1,0 +1,19 @@
+PREFIX iopce: <http://www.w3id.org/iopce#>
+PREFIX opm: <http://www.w3id.org/opm#>
+PREFIX schema: <https://schema.org/>
+PREFIX brot: <http://www.w3id.org/brot#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX BMS: <http://www.example.org/BMS#>
+
+SELECT DISTINCT ?bridge ?condition_index_value
+WHERE {
+#get bridge actual condition indexes
+?bridge iopce:indice_de_condicion ?condition_index . 			
+?condition_index opm:hasPropertyState ?condition_index_state.
+?condition_index_state a opm:CurrentPropertyState;
+    schema:value ?condition_index_value .
+
+# if they are connected to a road link that is a member of the Llobregat River
+?bridge brot:locatedAbove ?hydrolink  .							
+BMS:20052 rdfs:member ?hydrolink .
+} ORDER BY DESC(?condition_index_value)

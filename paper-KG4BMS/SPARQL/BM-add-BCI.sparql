@@ -1,0 +1,31 @@
+PREFIX iopce: <http://www.w3id.org/iopce#>
+PREFIX opm: <http://www.w3id.org/opm#>
+PREFIX schema: <https://schema.org/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX bot: <http://www.w3id.org/bot#>
+PREFIX BMS: <http://www.example.org/BMS#>
+
+INSERT{BMS:PR-04-B015 iopce:indice_de_condicion  ?bridgeConditionIndex . #create condition index property and the current state value and time
+?bridgeConditionIndex opm:hasPropertyState ?bridgeConditionIndexState .
+?bridgeConditionIndexState a  opm:CurrentPropertyState;
+    schema:value ?bridgeConditionIndexStateValue ;
+prov:generatedAtTime ?evaluationTime .
+}WHERE{
+{SELECT (MAX(?zoneConditionIndexStateValue) AS ?bridgeConditionIndexStateValue)
+WHERE{
+    BMS:PR-04-B015 bot:containsZone+ ?zone .
+    ?zone iopce:indice_de_condicion ?zoneConditionIndex .
+    ?zoneConditionIndex opm:hasPropertyState ?zoneConditionIndexState .
+    ?zoneConditionIndexState a opm:CurrentPropertyState ;
+        schema:value ?zoneConditionIndexStateValue .
+    }
+}
+
+# only if there is no condition index asociated to the bridge
+FILTER NOT EXISTS {BMS:PR-04-B015 iopce:indice_de_condicion  ?any.} 
+
+# create condition index 
+BIND ( NOW() AS ?evaluationTime)
+BIND(IRI(CONCAT(str(BMS:PR-04-B015), '-conditionindex' )) AS ?bridgeConditionIndex) # create condition index IRI
+BIND(IRI(CONCAT(str(?bridgeConditionIndex),"-S",str(YEAR(?evaluationTime)), str(MONTH(?evaluationTime)), str(DAY(?evaluationTime)))) AS ?bridgeConditionIndexState) 
+}
