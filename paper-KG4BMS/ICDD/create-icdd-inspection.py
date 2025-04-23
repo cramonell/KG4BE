@@ -9,7 +9,7 @@ report = InternalDocument(
     requested = True, 
 )
 inspection_graph = InternalDocument(
-    path = "data/inspection_202310.ttl",
+    path = "data/inspection_202203.ttl",
     requested = True, 
 )
 doc = ExternalDocument(
@@ -38,7 +38,7 @@ for img in images:
 
 #Generate links for docs
 linkset_docs = Linkset()
-identifier = URIBasedIdentifier(uri='http://0.0.0.0:5004/strata/stratum-2/graph/inspection202310_doc')
+identifier = URIBasedIdentifier(uri='http://www.example.org/inspection202203_doc')
 graph_linkel = LinkElement(document = inspection_graph, identifier = identifier)
 doc_linkel = LinkElement(document = doc)
 report_linkel = LinkElement(document = report)
@@ -50,7 +50,7 @@ linkset_docs.add_link(link2)
 #Generate links for images
 linkset_img = Linkset()
 for i in range(22):
-    identifier = URIBasedIdentifier(uri = 'http://0.0.0.0:5004/strata/stratum-2/graph/damage-202410-' + str(i+1))
+    identifier = URIBasedIdentifier(uri = 'http://www.example.org/damage-202203-' + str(i+1))
     graph_linkel = LinkElement(document = inspection_graph, identifier = identifier)
     img_linkel = LinkElement(document = images[random.randint(0, len(images)-1)])
     link = Link(graph_linkel, img_linkel)
